@@ -1,12 +1,8 @@
 (function () {
 
-  // Footer year
-  const yearEl = document.querySelector("[data-year], #year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  const yearEl = document.querySelector("[data-year]");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  // Mobile nav toggle
   const header = document.querySelector("[data-header]");
   const nav = document.querySelector("[data-nav]");
   const toggle = document.querySelector("[data-nav-toggle]");
@@ -16,6 +12,7 @@
   function setOpen(isOpen) {
     nav.classList.toggle("is-open", isOpen);
     toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   }
 
   toggle.addEventListener("click", () => {
