@@ -1,269 +1,548 @@
-<!doctype html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Piechart Digital: bold, quirky digital marketing. Paid social, organic content, creative, landing pages and site builds." />
-  <title>Piechart Digital | Bold marketing that converts</title>
+:root{
+  /* Brand accents */
+  --yellow: #ffd400;
+  --yellow-2: #ffe777;
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  --ink: #0c0c10;
+  --paper: #ffffff;
+  --paper-2: #fff7d1;
 
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  /* Calm, neurodivergent-friendly background */
+  --bg: #fbfaf6;
+  --bg-2: #f3f1ea;
 
-<body>
-  <header class="site-header" data-header>
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Piechart Digital home">
-        <span class="brand-mark" aria-hidden="true">◔</span>
-        <span class="brand-name">Piechart Digital</span>
-      </a>
+  --muted: rgba(12,12,16,0.72);
 
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
-        <span class="nav-toggle-lines" aria-hidden="true"></span>
-      </button>
+  --radius: 18px;
+  --radius-lg: 26px;
+  --shadow: 0 14px 30px rgba(0,0,0,0.18);
+  --shadow-hard: 0 10px 0 rgba(0,0,0,0.18);
+  --container: 1120px;
 
-      <nav class="site-nav" data-nav>
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html">Meet the Team</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a class="nav-cta" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  --stroke: rgba(12,12,16,0.14);
+  --stroke-strong: rgba(12,12,16,0.22);
+}
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="kicker">Quirky. Creative. Built for results.</p>
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
 
-          <h1>Bold digital marketing that turns clicks into customers.</h1>
+body{
+  margin: 0;
+  font-family: "Outfit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
 
-          <p class="lead">
-            Paid social, organic content, creative, and landing pages that actually do the job.
-            No fluff. No buzzwords. Just smart execution, solid teamwork, and measurable wins.
-          </p>
+  background:
+    radial-gradient(circle at 18px 18px, rgba(12,12,16,0.04) 1px, transparent 1px) 0 0 / 24px 24px,
+    radial-gradient(900px 600px at 70% 15%, rgba(255,212,0,0.10), transparent 60%),
+    radial-gradient(900px 600px at 20% 85%, rgba(12,12,16,0.04), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+}
 
-          <div class="hero-actions">
-            <a class="btn btn-dark" href="mailto:hello@piechartdigital.co.uk?subject=Piechart%20Digital%20Enquiry">Email us</a>
-            <a class="btn btn-ghost" href="portfolio.html">View portfolio</a>
-          </div>
+img{ max-width:100%; height:auto; display:block; }
+a{ color: inherit; text-decoration: none; }
 
-          <div class="proof-row" aria-label="Quick proof points">
-            <div class="chip">Paid social</div>
-            <div class="chip">Content + creative</div>
-            <div class="chip">Landing pages</div>
-            <div class="chip">Reporting</div>
-          </div>
-        </div>
+.container{
+  width: min(var(--container), calc(100% - 40px));
+  margin: 0 auto;
+}
 
-        <!-- Hero image area -->
-        <div class="hero-image">
-          <img src="image/hero-placeholder.png" alt="Piechart Digital work preview">
-        </div>
-      </div>
-    </section>
+/* Headings */
+h1, h2, h3{
+  font-family: "Space Grotesk", "Outfit", sans-serif;
+  letter-spacing: -0.04em;
+}
+h1{
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.02;
+  margin: 14px 0 12px;
+}
+p{ line-height: 1.6; }
 
-    <!-- CLIENT STRIP -->
-    <section class="clients">
-      <div class="container">
-        <div class="section-head">
-          <h2>Brands we’ve worked with</h2>
-          <p>Real projects across insurance, retail, sport, local services, and creative studios.</p>
-        </div>
+/* Header */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.70);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--stroke);
+}
 
-        <div class="client-grid" role="list">
-          <div class="client" role="listitem">Totally Sports Insurance</div>
-          <div class="client" role="listitem">JD Sports</div>
-          <div class="client" role="listitem">Rebalance Chiropractic</div>
-          <div class="client" role="listitem">Stockport Vikings FC</div>
-          <div class="client" role="listitem">Cornell Studios</div>
-        </div>
-      </div>
-    </section>
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 0;
+  gap: 16px;
+}
 
-    <!-- SERVICES -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>What we do</h2>
-          <p>Pick a lane or combine the lot. Either way, it all plugs into growth.</p>
-        </div>
+/* Brand (bigger now) */
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
 
-        <div class="card-grid">
-          <article class="card">
-            <h3>Paid Social</h3>
-            <p>Meta-first performance campaigns with creative testing, tracking, and optimisation.</p>
-            <ul class="ticks">
-              <li>Lead gen and conversions</li>
-              <li>Creative testing framework</li>
-              <li>Clear reporting</li>
-            </ul>
-          </article>
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
 
-          <article class="card">
-            <h3>Organic Content</h3>
-            <p>Posts that build trust, keep you visible, and make your paid ads convert better.</p>
-            <ul class="ticks">
-              <li>Content plans and calendars</li>
-              <li>Hooks, captions, carousels</li>
-              <li>Community-friendly tone</li>
-            </ul>
-          </article>
+.brand-mark{
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  display:grid;
+  place-items:center;
 
-          <article class="card">
-            <h3>Creative</h3>
-            <p>Scroll-stopping visuals and punchy copy that feels human, not corporate wallpaper.</p>
-            <ul class="ticks">
-              <li>Ad creatives</li>
-              <li>Brand templates</li>
-              <li>Campaign concepts</li>
-            </ul>
-          </article>
+  background: var(--ink);
+  color: var(--yellow);
+  border-radius: 12px;
+  box-shadow: var(--shadow-hard);
+}
 
-          <article class="card">
-            <h3>Landing Pages + Site Builds</h3>
-            <p>Fast, simple pages built to convert. Clean structure, sharp CTA, proper tracking.</p>
-            <ul class="ticks">
-              <li>Conversion-focused layout</li>
-              <li>Speed and SEO basics</li>
-              <li>Analytics-ready</li>
-            </ul>
-          </article>
-        </div>
+.brand-name{
+  font-weight: 900;
+}
 
-        <div class="center-cta">
-          <a class="btn btn-dark" href="services.html">See services</a>
-        </div>
-      </div>
-    </section>
+/* Nav */
+.nav-toggle{
+  display:none;
+  background: var(--paper);
+  border: 1px solid var(--stroke-strong);
+  border-radius: 14px;
+  width: 44px;
+  height: 44px;
+}
+.nav-toggle-lines{
+  display:block;
+  width: 18px;
+  height: 2px;
+  background: var(--ink);
+  margin: 0 auto;
+  position: relative;
+}
+.nav-toggle-lines::before,
+.nav-toggle-lines::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width: 18px;
+  height: 2px;
+  background: var(--ink);
+}
+.nav-toggle-lines::before{ top:-6px; }
+.nav-toggle-lines::after{ top:6px; }
 
-    <!-- FEATURED WORK -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Featured work</h2>
-          <p>Quick snapshots for now. Full case studies can be added page by page.</p>
-        </div>
+.site-nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
 
-        <div class="work-grid">
-          <article class="work-card">
-            <div class="work-top">
-              <span class="pill">Paid Social</span>
-              <span class="pill">Insurance</span>
-            </div>
-            <h3>Totally Sports Insurance</h3>
-            <p>Campaign setup, creative testing, and lead-gen performance optimisation.</p>
-            <a class="work-link" href="portfolio.html">View in portfolio</a>
-          </article>
+.site-nav a{
+  display:inline-flex;
+  align-items:center;
+  padding: 10px 12px;
+  border-radius: 999px;
+  color: rgba(12,12,16,0.86);
+  font-weight: 800;
+}
 
-          <article class="work-card">
-            <div class="work-top">
-              <span class="pill">Content</span>
-              <span class="pill">Retail</span>
-            </div>
-            <h3>JD Sports</h3>
-            <p>Creative-led support and content thinking across brand-first marketing.</p>
-            <a class="work-link" href="portfolio.html">View in portfolio</a>
-          </article>
+.site-nav a:hover{
+  background: rgba(12,12,16,0.06);
+}
 
-          <article class="work-card">
-            <div class="work-top">
-              <span class="pill">Local Services</span>
-              <span class="pill">Lead Gen</span>
-            </div>
-            <h3>Rebalance Chiropractic</h3>
-            <p>Lead capture, messaging, and conversion-focused page improvements.</p>
-            <a class="work-link" href="portfolio.html">View in portfolio</a>
-          </article>
-        </div>
+.site-nav a.active{
+  background: rgba(12,12,16,0.08);
+  border: 1px solid var(--stroke-strong);
+}
 
-        <div class="center-cta">
-          <a class="btn btn-ghost" href="portfolio.html">Explore the portfolio</a>
-        </div>
-      </div>
-    </section>
+.site-nav a.nav-cta{
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid rgba(12,12,16,0.10);
+  box-shadow: var(--shadow-hard);
+}
 
-    <!-- PROCESS -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>How we work</h2>
-          <p>A simple loop that keeps improving, not a one-and-done fling.</p>
-        </div>
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-weight: 900;
+  border: 1px solid rgba(12,12,16,0.10);
+  transition: transform 140ms ease, filter 140ms ease;
+}
+.btn:hover{ transform: translateY(-1px); }
+.btn:active{ transform: translateY(0px); }
 
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">01</div>
-            <h3>Audit</h3>
-            <p>We figure out what matters: audience, offer, tracking, and where the leaks are.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">02</div>
-            <h3>Build</h3>
-            <p>Creative, campaigns, and landing pages built to convert, with clean structure.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">03</div>
-            <h3>Optimise</h3>
-            <p>Test, learn, improve. Every week gets sharper with decisions backed by data.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+.btn-dark{
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: var(--shadow-hard);
+}
 
-    <!-- CONTACT CTA -->
-    <section class="cta">
-      <div class="container cta-inner">
-        <div>
-          <h2>Want us to take a look at your marketing?</h2>
-          <p>
-            Send a quick message with what you do, what you sell, and what you want to improve.
-            We’ll reply with next steps.
-          </p>
-        </div>
+.btn-ghost{
+  background: rgba(255,255,255,0.88);
+  color: var(--ink);
+  border: 1px solid var(--stroke-strong);
+  box-shadow: 0 10px 0 rgba(12,12,16,0.12);
+}
+.btn-ghost:hover{ filter: brightness(0.98); }
 
-        <div class="cta-actions">
-          <a class="btn btn-dark" href="mailto:hello@piechartdigital.co.uk?subject=Piechart%20Digital%20Enquiry">Email hello@piechartdigital.co.uk</a>
-          <a class="btn btn-ghost" href="contact.html">Contact page</a>
-        </div>
-      </div>
-    </section>
-  </main>
+/* Hero */
+.hero{
+  padding: 54px 0 18px;
+}
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <div class="footer-brand">
-          <span class="brand-mark" aria-hidden="true">◔</span>
-          <span class="brand-name">Piechart Digital</span>
-        </div>
-        <p class="footer-note">Bold marketing, clean execution.</p>
-      </div>
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 34px;
+  align-items: center;
+}
 
-      <div class="footer-links">
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="team.html">Meet the Team</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-      </div>
+.kicker{
+  display:inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid var(--stroke-strong);
+  font-weight: 900;
+  transform: rotate(-1deg);
+}
 
-      <div class="footer-right">
-        <a class="footer-email" href="mailto:hello@piechartdigital.co.uk">hello@piechartdigital.co.uk</a>
-        <p class="footer-small">© <span data-year></span> Piechart Digital</p>
-      </div>
-    </div>
-  </footer>
+.lead{
+  color: rgba(12,12,16,0.76);
+  font-size: 18px;
+  max-width: 56ch;
+}
 
-  <script src="js/main.js" defer></script>
-</body>
-</html>
+.hero-actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.proof-row{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.chip{
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid var(--stroke-strong);
+  color: rgba(12,12,16,0.78);
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 10px 0 rgba(12,12,16,0.08);
+}
+
+/* Hero image area */
+.hero-image{
+  background: rgba(255,255,255,0.90);
+  border: 1px solid var(--stroke-strong);
+  border-radius: 24px;
+  min-height: 420px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  box-shadow: 0 14px 0 rgba(12,12,16,0.10);
+  overflow:hidden;
+}
+
+.hero-image img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+/* Sections */
+.section{
+  padding: 54px 0;
+}
+
+.section-alt{
+  background: rgba(255,255,255,0.45);
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+}
+
+.section-head{
+  margin-bottom: 18px;
+}
+
+.section-head h2{
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.section-head p{
+  margin: 0;
+  color: rgba(12,12,16,0.70);
+  max-width: 68ch;
+}
+
+/* Clients */
+.clients{
+  padding: 26px 0 10px;
+}
+
+.client-grid{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.client{
+  padding: 12px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid var(--stroke-strong);
+  color: rgba(12,12,16,0.84);
+  text-align:center;
+  font-weight: 900;
+  font-size: 14px;
+  box-shadow: 0 10px 0 rgba(12,12,16,0.10);
+}
+
+/* Cards */
+.card-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.card{
+  padding: 18px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.90);
+  border: 1px solid var(--stroke-strong);
+  box-shadow: 0 12px 0 rgba(12,12,16,0.10);
+  transform: rotate(0.2deg);
+}
+.card:nth-child(2){ transform: rotate(-0.2deg); }
+.card:nth-child(3){ transform: rotate(0.15deg); }
+.card:nth-child(4){ transform: rotate(-0.15deg); }
+
+.card h3{
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.card p{
+  margin: 0 0 12px;
+  color: rgba(12,12,16,0.70);
+}
+.ticks{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(12,12,16,0.78);
+}
+.ticks li{ margin: 8px 0; }
+
+/* Featured work */
+.work-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.work-card{
+  padding: 18px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.90);
+  border: 1px solid var(--stroke-strong);
+  box-shadow: 0 12px 0 rgba(12,12,16,0.10);
+  position: relative;
+  overflow:hidden;
+}
+
+.work-card::before{
+  content:"";
+  position:absolute;
+  inset: -70px -70px auto auto;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at 30% 30%, rgba(12,12,16,0.10), transparent 60%);
+  transform: rotate(15deg);
+}
+
+.work-top{
+  display:flex;
+  gap: 8px;
+}
+
+.pill{
+  font-size: 12px;
+  font-weight: 900;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(12,12,16,0.08);
+  border: 1px solid rgba(12,12,16,0.12);
+}
+
+.work-link{
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* Steps */
+.steps{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.step{
+  padding: 18px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.90);
+  border: 1px solid var(--stroke-strong);
+  box-shadow: 0 12px 0 rgba(12,12,16,0.10);
+}
+
+.step-num{
+  display:inline-flex;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--yellow);
+  font-weight: 900;
+}
+
+/* CTA */
+.cta{
+  padding: 52px 0;
+}
+
+.cta-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 18px;
+
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  background: rgba(12,12,16,0.92);
+  color: var(--paper);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(12,12,16,0.10);
+}
+
+.cta h2{ margin: 0 0 8px; }
+.cta p{ margin: 0; color: rgba(255,255,255,0.82); }
+
+.cta-actions{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 260px;
+}
+
+.center-cta{
+  margin-top: 18px;
+}
+
+/* Footer */
+.site-footer{
+  border-top: 1px solid var(--stroke);
+  padding: 30px 0;
+  color: rgba(12,12,16,0.70);
+}
+
+.footer-inner{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 18px;
+  align-items:start;
+}
+
+.footer-brand{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+}
+
+.footer-note{
+  margin: 10px 0 0;
+  color: rgba(12,12,16,0.66);
+}
+
+.footer-links{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a:hover{
+  text-decoration: underline;
+}
+
+.footer-right{
+  text-align:right;
+}
+
+.footer-email{
+  font-weight: 900;
+}
+.footer-email:hover{ text-decoration: underline; }
+
+.footer-small{
+  margin: 10px 0 0;
+  color: rgba(12,12,16,0.60);
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .client-grid{ grid-template-columns: repeat(2, 1fr); }
+  .card-grid{ grid-template-columns: repeat(2, 1fr); }
+  .work-grid{ grid-template-columns: 1fr; }
+  .steps{ grid-template-columns: 1fr; }
+
+  .cta-inner{ flex-direction: column; align-items: flex-start; }
+  .cta-actions{ width: 100%; min-width: auto; flex-direction: row; flex-wrap: wrap; }
+
+  .nav-toggle{ display:inline-flex; align-items:center; justify-content:center; }
+
+  .site-nav{
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    right: 20px;
+    display:none;
+
+    background: rgba(255,255,255,0.92);
+    border: 1px solid var(--stroke-strong);
+    border-radius: 18px;
+    padding: 10px;
+    box-shadow: var(--shadow);
+  }
+
+  .site-nav ul{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-nav.is-open{ display:block; }
+}
