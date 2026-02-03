@@ -11,7 +11,7 @@
   const nav = document.querySelector("[data-nav]");
   const toggle = document.querySelector("[data-nav-toggle]");
 
-  if (!nav || !toggle) return;
+  if (!header || !nav || !toggle) return;
 
   function setOpen(isOpen) {
     nav.classList.toggle("is-open", isOpen);
@@ -31,5 +31,3 @@
   });
 
 })();
-
-
