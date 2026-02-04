@@ -1,13 +1,13 @@
-/* css/style.css */
 :root{
   --yellow:#ffd400;
 
   --ink:#111;
   --muted:#555;
 
-  --paper:#ffffff;
-
-  --dot:rgba(0,0,0,0.055);
+  /* dots more visible */
+  --dot:rgba(0,0,0,0.09);
+  --dot-size: 1.35px;
+  --dot-gap: 22px;
 
   --shadow-hard:0 10px 0 rgba(0,0,0,0.18);
   --shadow-soft:0 20px 40px rgba(0,0,0,0.12);
@@ -26,7 +26,7 @@ body{
   color:var(--ink);
 
   background:
-    radial-gradient(circle at 18px 18px, var(--dot) 1px, transparent 1px) 0 0 / 24px 24px,
+    radial-gradient(circle at 16px 16px, var(--dot) var(--dot-size), transparent calc(var(--dot-size) + 0.1px)) 0 0 / var(--dot-gap) var(--dot-gap),
     #fff;
 }
 
@@ -38,9 +38,7 @@ a{color:inherit;text-decoration:none;}
   margin:0 auto;
 }
 
-/* =========================
-   Skip link (hidden until focus)
-========================= */
+/* Skip link hidden until focus */
 .skip-link{
   position:absolute;
   left:-9999px;
@@ -53,13 +51,9 @@ a{color:inherit;text-decoration:none;}
   box-shadow:0 10px 0 rgba(0,0,0,0.15);
   z-index:9999;
 }
-.skip-link:focus{
-  left:12px;
-}
+.skip-link:focus{ left:12px; }
 
-/* =========================
-   HEADER (white background)
-========================= */
+/* HEADER white */
 .site-header{
   position:sticky;
   top:0;
@@ -67,7 +61,6 @@ a{color:inherit;text-decoration:none;}
 
   background:rgba(255,255,255,0.92);
   backdrop-filter:blur(10px);
-
   border-bottom:1px solid rgba(0,0,0,0.10);
 }
 
@@ -93,7 +86,6 @@ a{color:inherit;text-decoration:none;}
   height:36px;
   display:grid;
   place-items:center;
-
   background:#111;
   color:var(--yellow);
   border-radius:10px;
@@ -116,18 +108,17 @@ a{color:inherit;text-decoration:none;}
   font-weight:800;
 }
 
-.site-nav a:hover{
-  background:rgba(0,0,0,0.06);
-}
+.site-nav a:hover{ background:rgba(0,0,0,0.06); }
+.site-nav a.active{ background:rgba(0,0,0,0.08); }
 
-.site-nav a.active{
-  background:rgba(0,0,0,0.08);
-}
-
+/* Contact CTA: black bg, yellow text */
 .site-nav .nav-cta{
   background:#111;
-  color:#fff;
+  color:var(--yellow);
   box-shadow:var(--shadow-hard);
+}
+.site-nav .nav-cta:hover{
+  background:#000;
 }
 
 /* Mobile toggle */
@@ -160,9 +151,7 @@ a{color:inherit;text-decoration:none;}
 .nav-toggle-lines::before{ top:-6px; }
 .nav-toggle-lines::after{ top:6px; }
 
-/* =========================
-   BUTTONS (quirky + uneven)
-========================= */
+/* BUTTONS */
 .btn{
   padding:12px 16px;
   border-radius:14px;
@@ -173,8 +162,8 @@ a{color:inherit;text-decoration:none;}
   transition:transform 140ms ease, filter 140ms ease;
 }
 
-.btn:hover{transform:translateY(-2px) rotate(-0.2deg);}
-.btn:active{transform:translateY(0) rotate(0deg);}
+.btn:hover{ transform:translateY(-2px) rotate(-0.2deg); }
+.btn:active{ transform:translateY(0) rotate(0deg); }
 
 .btn-dark{
   background:var(--yellow);
@@ -190,9 +179,18 @@ a{color:inherit;text-decoration:none;}
   box-shadow:0 8px 0 rgba(0,0,0,0.12);
 }
 
-/* =========================
-   HERO (yellow panel stays)
-========================= */
+/* NEW: black button with yellow text */
+.btn-black{
+  background:#111;
+  color:var(--yellow);
+  border:1px solid rgba(0,0,0,0.35);
+  box-shadow:var(--shadow-hard);
+}
+.btn-black:hover{
+  filter:brightness(1.05);
+}
+
+/* HERO (yellow panel stays) */
 .hero{
   background:var(--yellow);
   padding:72px 0;
@@ -200,7 +198,6 @@ a{color:inherit;text-decoration:none;}
   overflow:hidden;
 }
 
-/* soft glow blobs */
 .hero::before,
 .hero::after{
   content:"";
@@ -242,7 +239,8 @@ h1{
   font-size:clamp(34px,4vw,56px);
 }
 
-.lead{color:#222;max-width:58ch;}
+.lead{ color:#222; max-width:60ch; }
+.lead strong{ font-weight:900; }
 
 .hero-actions{
   display:flex;
@@ -251,7 +249,7 @@ h1{
   flex-wrap:wrap;
 }
 
-/* Chips (fixed) */
+/* Chips */
 .proof-row{
   display:flex;
   gap:10px;
@@ -270,9 +268,9 @@ h1{
   box-shadow:0 8px 0 rgba(0,0,0,0.12);
   transform:rotate(-0.35deg);
 }
-.chip:nth-child(2){transform:rotate(0.25deg);}
-.chip:nth-child(3){transform:rotate(-0.2deg);}
-.chip:nth-child(4){transform:rotate(0.35deg);}
+.chip:nth-child(2){ transform:rotate(0.25deg); }
+.chip:nth-child(3){ transform:rotate(-0.2deg); }
+.chip:nth-child(4){ transform:rotate(0.35deg); }
 
 .hero-image{
   background:#fff;
@@ -288,20 +286,18 @@ h1{
   object-fit:cover;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 .section{
   padding:72px 0;
   background:#fff;
 }
 
-/* optional alt sections */
 .section-alt{
-  background:rgba(0,0,0,0.03);
+  background:
+    radial-gradient(circle at 16px 16px, rgba(0,0,0,0.09) var(--dot-size), transparent calc(var(--dot-size) + 0.1px)) 0 0 / var(--dot-gap) var(--dot-gap),
+    rgba(0,0,0,0.03);
 }
 
-/* Headings in sections */
 .section-head h2{
   font-family:"Space Grotesk",sans-serif;
   letter-spacing:-0.04em;
@@ -314,9 +310,7 @@ h1{
   max-width:70ch;
 }
 
-/* =========================
-   CLIENT PILLS (tilted)
-========================= */
+/* CLIENT PILLS */
 .client-grid{
   display:grid;
   grid-template-columns:repeat(5,1fr);
@@ -338,9 +332,7 @@ h1{
 .client:nth-child(4){transform:rotate(0.4deg);}
 .client:nth-child(5){transform:rotate(-0.3deg);}
 
-/* =========================
-   CARDS (sticker look + slight tilts)
-========================= */
+/* CARDS */
 .card-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -356,7 +348,6 @@ h1{
   transform:rotate(0.25deg);
   transition:transform 180ms ease, box-shadow 180ms ease;
 }
-
 .card:nth-child(2){transform:rotate(-0.25deg);}
 .card:nth-child(3){transform:rotate(0.15deg);}
 .card:nth-child(4){transform:rotate(-0.15deg);}
@@ -372,9 +363,7 @@ h1{
 .ticks{margin:0;padding-left:18px;color:#333;}
 .ticks li{margin:8px 0;}
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 .site-footer{
   border-top:1px solid rgba(0,0,0,0.10);
   padding:30px 0;
@@ -410,9 +399,7 @@ h1{
 
 .footer-small{margin:10px 0 0;color:var(--muted);font-size:13px;}
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 @media(max-width:980px){
   .hero-grid{grid-template-columns:1fr;}
   .card-grid{grid-template-columns:repeat(2,1fr);}
