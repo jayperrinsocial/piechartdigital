@@ -88,7 +88,7 @@ a{color:inherit;text-decoration:none;}
   flex:0 0 auto;
 }
 
-/* Brand text stacks properly */
+/* Text stacks properly */
 .brand-text{
   display:flex;
   flex-direction:column;
@@ -96,15 +96,17 @@ a{color:inherit;text-decoration:none;}
   line-height:1.05;
 }
 
+/* UPDATED: slightly stronger brand */
 .brand-name{
-  font-size:22px;
+  font-size:24px;
   font-weight:900;
-  letter-spacing:-0.01em;
+  letter-spacing:-0.015em;
 }
 
+/* UPDATED: clearer tagline but still secondary */
 .brand-tagline{
-  font-size:12px;
-  font-weight:700;
+  font-size:13px;
+  font-weight:600;
   color:#666;
   letter-spacing:0.02em;
 }
@@ -123,7 +125,7 @@ a{color:inherit;text-decoration:none;}
   padding:10px 14px;
   border-radius:999px;
   font-weight:800;
-  white-space:nowrap;
+  white-space:nowrap; /* prevents Meet the Team breaking */
 }
 
 .site-nav a:hover{ background:rgba(0,0,0,0.06); }
@@ -226,14 +228,16 @@ a{color:inherit;text-decoration:none;}
   z-index:1;
 }
 
+/* UPDATED: kicker feels more intentional */
 .kicker{
   display:inline-flex;
-  padding:8px 12px;
+  padding:10px 16px; /* slightly larger */
   border-radius:999px;
   background:#fff;
-  font-weight:800;
+  font-weight:900;
+  font-size:14px;
   transform:rotate(-1deg);
-  box-shadow:0 8px 0 rgba(0,0,0,0.12);
+  box-shadow:0 10px 0 rgba(0,0,0,0.15); /* stronger */
 }
 
 h1{
@@ -260,32 +264,36 @@ h1{
 .hero-choices{
   margin-top:56px;
 }
+
+/* UPDATED: title stronger */
 .choices-title{
-  margin:0 0 14px;
+  margin:0 0 16px;
   font-family:"Space Grotesk",sans-serif;
   font-weight:900;
   letter-spacing:-0.02em;
-  font-size:20px;
+  font-size:22px;
   color:#111;
 }
 
 /* Chips */
 .proof-row{
   display:flex;
-  gap:10px;
+  gap:14px; /* UPDATED: more breathing room */
   flex-wrap:wrap;
   margin-top:0;
 }
 
+/* UPDATED: chips chunkier + more tappable */
 .chip{
   display:inline-flex;
   align-items:center;
-  padding:9px 12px;
+  padding:11px 16px;
   border-radius:999px;
   background:#fff;
   color:#000;
   font-weight:900;
-  box-shadow:0 8px 0 rgba(0,0,0,0.12);
+  font-size:14px;
+  box-shadow:0 9px 0 rgba(0,0,0,0.14);
   transform:rotate(-0.35deg);
 }
 .chip:nth-child(2){ transform:rotate(0.25deg); }
@@ -592,4 +600,11 @@ h1{
   .card{transition:none;}
   .card:hover{transform:none; box-shadow:var(--shadow-hard);}
   .logo-item:hover{transform:none; box-shadow:var(--shadow-hard);}
+}
+
+/* Keep (but consolidate) brand stack helper */
+.brand-stack{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
 }
