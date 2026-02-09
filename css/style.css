@@ -608,3 +608,22 @@ h1{
   flex-direction:column;
   line-height:1.1;
 }
+/* Contact CTA - make it pop like the hero "Email us" */
+.site-nav .nav-cta{
+  background:#111;
+  color:var(--yellow);
+  border:2px solid #111;
+  box-shadow:0 12px 0 rgba(0,0,0,0.18);
+  transform:rotate(-0.35deg);
+  transition:transform 140ms ease, filter 140ms ease;
+}
+
+.site-nav .nav-cta:hover{
+  background:#000;
+  transform:translateY(-2px) rotate(0deg);
+  filter:brightness(1.05);
+}
+
+.site-nav .nav-cta:active{
+  transform:translateY(0) rotate(0deg);
+}
