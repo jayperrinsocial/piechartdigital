@@ -593,3 +593,16 @@ h1{
   .card:hover{transform:none; box-shadow:var(--shadow-hard);}
   .logo-item:hover{transform:none; box-shadow:var(--shadow-hard);}
 }
+
+.brand-stack {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  font-size: 12px;
+  opacity: .6;
+  font-weight: 500;
+}
+
