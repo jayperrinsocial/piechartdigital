@@ -357,9 +357,8 @@ SECTIONS
 
 /* Off-white dotted panel */
 .section-alt{
-  background:
-    radial-gradient(circle at 16px 16px, rgba(0,0,0,0.12) var(--dot-size), transparent calc(var(--dot-size) + 0.1px)) 0 0 / var(--dot-gap) var(--dot-gap),
-    rgba(0,0,0,0.03);
+  background:#fafafa;
+  background-image:none;
 }
 
 .section-head h2{
