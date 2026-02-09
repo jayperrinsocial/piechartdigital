@@ -582,3 +582,18 @@ h1{
   .card:hover{transform:none; box-shadow:var(--shadow-hard);}
   .logo-item:hover{transform:none; box-shadow:var(--shadow-hard);}
 }
+
+/* Brand tagline under logo */
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.brand-tagline{
+  font-size:12px;
+  font-weight:600;
+  color:#666;
+  letter-spacing:0.02em;
+}
+
