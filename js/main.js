@@ -1,28 +1,53 @@
+// js/main.js
+
 (function () {
+  // Footer year
   const yearEl = document.querySelector("[data-year]");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  const header = document.querySelector("[data-header]");
-  const nav = document.querySelector("[data-nav]");
+  // Mobile nav toggle
   const toggle = document.querySelector("[data-nav-toggle]");
+  const nav = document.querySelector("[data-nav]");
+  const header = document.querySelector("[data-header]");
 
-  if (!header || !nav || !toggle) return;
+  if (!toggle || !nav) return;
 
-  function setOpen(isOpen) {
+  const setOpen = (isOpen) => {
     nav.classList.toggle("is-open", isOpen);
-    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-  }
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  };
 
   toggle.addEventListener("click", () => {
-    setOpen(!nav.classList.contains("is-open"));
+    const isOpen = !nav.classList.contains("is-open");
+    setOpen(isOpen);
   });
 
+  // Close on outside click
   document.addEventListener("click", (e) => {
-    if (!header.contains(e.target)) setOpen(false);
+    if (!nav.classList.contains("is-open")) return;
+    const target = e.target;
+    const clickedInside =
+      nav.contains(target) ||
+      toggle.contains(target) ||
+      (header && header.contains(target));
+
+    if (!clickedInside) setOpen(false);
   });
 
+  // Close on Esc
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") setOpen(false);
+  });
+
+  // Close after clicking a nav link (mobile)
+  nav.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (!link) return;
+    setOpen(false);
+  });
+
+  // Close if resized up to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 980) setOpen(false);
   });
 })();
