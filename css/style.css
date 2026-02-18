@@ -806,3 +806,8 @@ ul {
   background: #0b0b0b;
   color: #ffffff;
 }
+.site-nav .nav-cta {
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              color 120ms ease;
+}
