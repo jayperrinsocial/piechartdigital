@@ -1,53 +1,67 @@
 // js/main.js
 
-(function () {
-  // Footer year
+(() => {
+  const header = document.querySelector("[data-header]");
+  const navToggle = document.querySelector("[data-nav-toggle]");
+  const nav = document.querySelector("[data-nav]");
   const yearEl = document.querySelector("[data-year]");
+
+  // Footer year
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   // Mobile nav toggle
-  const toggle = document.querySelector("[data-nav-toggle]");
-  const nav = document.querySelector("[data-nav]");
-  const header = document.querySelector("[data-header]");
+  if (navToggle && nav) {
+    const openNav = () => {
+      nav.classList.add("is-open");
+      navToggle.setAttribute("aria-expanded", "true");
+      navToggle.setAttribute("aria-label", "Close menu");
+    };
 
-  if (!toggle || !nav) return;
+    const closeNav = () => {
+      nav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open menu");
+    };
 
-  const setOpen = (isOpen) => {
-    nav.classList.toggle("is-open", isOpen);
-    toggle.setAttribute("aria-expanded", String(isOpen));
-  };
+    const isOpen = () => nav.classList.contains("is-open");
 
-  toggle.addEventListener("click", () => {
-    const isOpen = !nav.classList.contains("is-open");
-    setOpen(isOpen);
-  });
+    navToggle.addEventListener("click", () => {
+      if (isOpen()) closeNav();
+      else openNav();
+    });
 
-  // Close on outside click
-  document.addEventListener("click", (e) => {
-    if (!nav.classList.contains("is-open")) return;
-    const target = e.target;
-    const clickedInside =
-      nav.contains(target) ||
-      toggle.contains(target) ||
-      (header && header.contains(target));
+    // Close menu when a nav link is clicked (mobile)
+    nav.addEventListener("click", (e) => {
+      const target = e.target;
+      if (target && target.matches("a")) closeNav();
+    });
 
-    if (!clickedInside) setOpen(false);
-  });
+    // Close menu on Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && isOpen()) {
+        closeNav();
+        navToggle.focus();
+      }
+    });
 
-  // Close on Esc
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") setOpen(false);
-  });
+    // Close menu if resizing to desktop
+    const mq = window.matchMedia("(min-width: 861px)");
+    const handleMq = () => {
+      if (mq.matches) closeNav();
+    };
 
-  // Close after clicking a nav link (mobile)
-  nav.addEventListener("click", (e) => {
-    const link = e.target.closest("a");
-    if (!link) return;
-    setOpen(false);
-  });
+    if (typeof mq.addEventListener === "function") mq.addEventListener("change", handleMq);
+    else if (typeof mq.addListener === "function") mq.addListener(handleMq);
+  }
 
-  // Close if resized up to desktop
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 980) setOpen(false);
-  });
+  // Optional: subtle header shadow once scrolled
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 6) header.classList.add("is-scrolled");
+      else header.classList.remove("is-scrolled");
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
 })();
