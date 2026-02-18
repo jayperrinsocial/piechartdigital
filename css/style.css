@@ -811,3 +811,15 @@ ul {
               box-shadow var(--transition),
               color 120ms ease;
 }
+
+.btn-black:hover {
+  background: #0b0b0b;
+  color: #ffffff;
+}
+
+.btn-black {
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              color 120ms ease;
+}
+
