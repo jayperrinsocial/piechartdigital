@@ -369,14 +369,18 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 14px;
+  padding: 10px 16px;
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.92);
   border: var(--border);
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.12);
   font-weight: 800;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+
+  transform: rotate(-2deg);
+  transform-origin: left center;
 }
+
 
 .lead {
   max-width: 55ch;
