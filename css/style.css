@@ -832,6 +832,21 @@ ul {
   text-underline-offset: 4px;
 }
 
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.footer-logo {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  display: block;
+}
+
+
 .socials {
   display: inline-flex;
   gap: 10px;
@@ -893,5 +908,12 @@ ul {
   transition: transform var(--transition),
               box-shadow var(--transition),
               color 120ms ease;
+}
+
+@media (min-width: 900px) {
+  .footer-logo {
+    width: 36px;
+    height: 36px;
+  }
 }
 
