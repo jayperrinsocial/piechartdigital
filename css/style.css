@@ -581,10 +581,11 @@ ul {
   }
 
   .hero-pie-slice {
-    right: 0;
-    bottom: -18px;
-    width: clamp(110px, 30vw, 190px);
-    transform: rotate(-8deg);
+    right: -6px;
+    bottom: -34px;
+    width: clamp(130px, 34vw, 220px);
+    transform: rotate(-24deg);
+    transform-origin: 70% 70%;
   }
 }
 
