@@ -1007,6 +1007,9 @@ overflow: hidden;
   padding-top: clamp(24px, 3vw, 40px);
 }
 
+.section-tight-bottom {
+  padding-bottom: clamp(16px, 3vw, 28px);
+}
 
 
 
