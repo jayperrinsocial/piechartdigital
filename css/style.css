@@ -431,7 +431,7 @@ ul {
 }
 
 .kicker {
-animation: kicker-in 520ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+animation: kicker-in 920ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
 
 }
 
@@ -945,7 +945,7 @@ animation: kicker-in 520ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
     right: -8px;
     bottom: -24px;
     width: clamp(110px, 32vw, 170px);
-    transform: rotate(-40deg);
+    transform: rotate(40deg);
     transform-origin: 50% 100%;
   }
 }
