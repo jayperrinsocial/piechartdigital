@@ -964,6 +964,33 @@ animation: kicker-in 920ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
   }
 }
 
+@media (max-width: 900px) {
+  /* Turn the page flow into a flex column for reordering */
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Brands section stays first */
+  .brands-left {
+    order: 1;
+  }
+
+  /* What we do section moves up */
+  .section-alt {
+    order: 2;
+  }
+
+  /* Neurodivergent Friendly moves down */
+  .callout {
+    order: 3;
+  }
+}
+@media (max-width: 900px) {
+  .callout {
+    margin-top: 32px;
+  }
+}
 
 
 
