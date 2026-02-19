@@ -517,6 +517,26 @@ ul {
   font-size: 0.95rem;
 }
 
+.chip-link {
+  cursor: pointer;
+}
+
+.chip-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.chip-link:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.chip-link:focus-visible {
+  outline: 3px solid rgba(0, 0, 0, 0.9);
+  outline-offset: 3px;
+}
+
+
 /* Dashboard + secondary pie slice */
 .hero-image {
   position: relative;
