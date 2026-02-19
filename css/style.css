@@ -72,6 +72,38 @@ h3 {
   line-height: 1.2;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  display: block;
+}
+
+.brand-stack {
+  display: grid;
+  line-height: 1.05;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-family: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: -0.02em;
+  font-size: 1.25rem;
+}
+
+.brand-tagline {
+  font-size: 0.9rem;
+  color: var(--grey-600);
+}
+
+
 ul {
   margin: 0;
   padding: 0;
