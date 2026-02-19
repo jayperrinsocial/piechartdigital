@@ -923,7 +923,7 @@ ul {
     right: -8px;
     bottom: -24px;
     width: clamp(110px, 32vw, 170px);
-    transform: rotate(-18deg);
+    transform: rotate(-80deg);
     transform-origin: 50% 100%;
   }
 }
