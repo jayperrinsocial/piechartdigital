@@ -430,6 +430,10 @@ ul {
   transform-origin: left center;
 }
 
+.kicker {
+  animation: kicker-in 420ms ease-out 120ms both;
+}
+
 
 .lead {
   max-width: 55ch;
@@ -534,6 +538,23 @@ ul {
 .chip-link:focus-visible {
   outline: 3px solid rgba(0, 0, 0, 0.9);
   outline-offset: 3px;
+}
+
+@keyframes kicker-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) rotate(-2deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-2px) rotate(-2deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-2deg);
+  }
 }
 
 
