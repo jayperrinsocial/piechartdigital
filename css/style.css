@@ -942,7 +942,7 @@ animation: kicker-in 920ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
 
 @media (max-width: 860px) {
   .hero-pie-slice {
-    right: -8px;
+    right: -80px;
     bottom: -24px;
     width: clamp(110px, 32vw, 170px);
     transform: rotate(40deg);
