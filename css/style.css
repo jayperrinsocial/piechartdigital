@@ -946,7 +946,7 @@ animation: kicker-in 920ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
     left: 52%;
     bottom: -48px;
     width: clamp(120px, 36vw, 190px);
-    transform: rotate(-5deg);
+    transform: rotate(45deg);
     transform-origin: 50% 100%;
   }
 }
