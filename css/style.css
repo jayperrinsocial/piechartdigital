@@ -954,6 +954,15 @@ animation: kicker-in 920ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
     transform-origin: 50% 100%;
   }
 }
+@media (max-width: 900px) {
+  .brands-grid {
+    gap: 64px;
+  }
+
+  .callout {
+    margin-top: 24px;
+  }
+}
 
 
 
