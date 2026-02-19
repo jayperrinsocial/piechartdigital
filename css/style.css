@@ -1003,6 +1003,9 @@ overflow: hidden;
   height: 100%;
   object-fit: cover;
 }
+.section-alt {
+  padding-top: clamp(24px, 3vw, 40px);
+}
 
 
 
