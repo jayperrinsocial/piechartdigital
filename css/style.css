@@ -918,3 +918,14 @@ ul {
   }
 }
 
+@media (max-width: 860px) {
+  .hero-pie-slice {
+    right: -10px;
+    bottom: -54px;
+    width: clamp(140px, 44vw, 240px);
+    transform: rotate(-38deg);
+    transform-origin: 85% 85%;
+  }
+}
+
+
