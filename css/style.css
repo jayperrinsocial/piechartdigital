@@ -202,6 +202,9 @@ ul {
 .section-tight-top {
   padding-top: clamp(28px, 4vw, 48px);
 }
+.section-tight-bottom {
+  padding-bottom: clamp(24px, 4vw, 40px);
+}
 
 /* ------------------------------
    Skip Link
