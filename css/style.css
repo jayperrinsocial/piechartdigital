@@ -103,6 +103,23 @@ h3 {
   color: var(--grey-600);
 }
 
+@media (min-width: 900px) {
+  .brand-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .brand-name {
+    font-size: 1.6rem;
+    letter-spacing: -0.03em;
+  }
+
+  .brand-tagline {
+    font-size: 0.95rem;
+  }
+}
+
+
 
 ul {
   margin: 0;
