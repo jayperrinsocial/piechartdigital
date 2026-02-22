@@ -112,3 +112,31 @@
 
   window.setTimeout(typeNext, startDelay);
 })();
+
+// Scroll reveal for headings
+(() => {
+  const els = document.querySelectorAll(".reveal-on-scroll");
+  if (!els.length) return;
+
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReduced) {
+    els.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.2,
+      rootMargin: "0px 0px -10% 0px",
+    }
+  );
+
+  els.forEach((el) => io.observe(el));
+})();
