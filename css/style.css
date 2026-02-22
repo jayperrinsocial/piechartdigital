@@ -592,8 +592,10 @@ ul {
 /* Scroll reveal */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 420ms ease, transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(28px);
+  transition:
+    opacity 700ms ease,
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 
