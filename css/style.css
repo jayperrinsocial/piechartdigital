@@ -1083,3 +1083,44 @@ ul {
 .section-tight-bottom {
   padding-bottom: clamp(16px, 3vw, 28px);
 }
+
+/* Brands section becomes centered single column (after callout is moved out) */
+.brands-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  justify-items: center;
+  text-align: center;
+}
+
+.brands-left {
+  width: 100%;
+  max-width: 820px;
+}
+
+/* Make the scroller feel more "filled" */
+.logo-scroller {
+  width: 100%;
+}
+
+.logo-track {
+  justify-content: center;
+  padding: 20px;
+  gap: 18px;
+}
+
+/* Bigger circular logo buttons */
+.logo-item {
+  width: 92px;
+  height: 92px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Keep logos circular, not square */
+.logo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* if you want contain instead, say so */
+  border-radius: 999px;
+}
