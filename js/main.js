@@ -112,8 +112,7 @@
 
   window.setTimeout(typeNext, startDelay);
 })();
-
-// Scroll reveal for headings
+// Scroll reveal for headings (delayed + more noticeable)
 (() => {
   const els = document.querySelectorAll(".reveal-on-scroll");
   if (!els.length) return;
@@ -128,13 +127,18 @@
     (entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
+
+        // Delay so it doesn't fire instantly on scroll
+        setTimeout(() => {
+          entry.target.classList.add("is-visible");
+        }, 220);
+
         observer.unobserve(entry.target);
       });
     },
     {
-      threshold: 0.2,
-      rootMargin: "0px 0px -10% 0px",
+      threshold: 0.35,
+      rootMargin: "0px 0px -15% 0px",
     }
   );
 
