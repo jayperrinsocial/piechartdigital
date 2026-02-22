@@ -1042,28 +1042,6 @@ ul {
 }
 
 @media (max-width: 900px) {
-  /* Turn the page flow into a flex column for reordering */
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Brands section stays first */
-  .brands-left {
-    order: 1;
-  }
-
-  /* What we do section moves up */
-  .section-alt {
-    order: 2;
-  }
-
-  /* Neurodivergent Friendly moves down */
-  .callout {
-    order: 3;
-  }
-}
-@media (max-width: 900px) {
   .callout {
     margin-top: 32px;
   }
@@ -1123,4 +1101,59 @@ ul {
   height: 100%;
   object-fit: cover; /* if you want contain instead, say so */
   border-radius: 999px;
+}
+
+/* Brands section: centred single column */
+.brands-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  justify-items: center;
+  text-align: center;
+}
+
+.brands-left {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Make the scroller fill space better */
+.logo-scroller {
+  width: 100%;
+}
+
+.logo-track {
+  justify-content: center;
+  padding: 22px;
+  gap: 18px;
+}
+
+/* Larger, truly circular logo items */
+.logo-item {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Keep images circular */
+.logo-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+/* ND section placement (white background, centered panel) */
+.section-nd {
+  padding-top: clamp(36px, 5vw, 60px);
+}
+
+.nd-wrap {
+  display: grid;
+  justify-items: center;
+}
+
+.section-nd .callout {
+  width: min(720px, 100%);
 }
