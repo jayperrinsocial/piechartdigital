@@ -137,7 +137,7 @@
       });
     },
     {
-      threshold: 0.35,
+      threshold: 0.45,
       rootMargin: "0px 0px -15% 0px",
     }
   );
