@@ -455,6 +455,52 @@ ul {
   margin-top: 20px;
 }
 
+/* Typing headline */
+.type-title {
+  position: relative;
+}
+
+.type-text {
+  white-space: pre-wrap;
+}
+
+.type-caret {
+  display: inline-block;
+  width: 0.12em;
+  height: 1em;
+  margin-left: 0.06em;
+  background: currentColor;
+  vertical-align: -0.08em;
+  animation: caret-blink 900ms steps(1) infinite;
+  opacity: 1;
+}
+
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Screen-reader-only utility (if you don't already have one) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .type-caret {
+    animation: none;
+    opacity: 0;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
