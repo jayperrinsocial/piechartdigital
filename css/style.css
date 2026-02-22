@@ -1157,3 +1157,16 @@ ul {
 .section-nd .callout {
   width: min(720px, 100%);
 }
+.section-nd {
+  background: #fff;
+  padding: clamp(40px, 5vw, 70px) 0;
+}
+
+.nd-wrap {
+  display: grid;
+  justify-items: center;
+}
+
+.section-nd .callout {
+  width: min(820px, 100%);
+}
