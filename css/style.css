@@ -1170,3 +1170,23 @@ ul {
 .section-nd .callout {
   width: min(820px, 100%);
 }
+
+.footer-manchester {
+  margin-top: 18px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.manchester-bee {
+  width: 34px;
+  height: auto;
+}
+
+.manchester-text {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.82);
+  letter-spacing: -0.01em;
+}
