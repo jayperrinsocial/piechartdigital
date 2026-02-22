@@ -119,8 +119,6 @@ h3 {
   }
 }
 
-
-
 ul {
   margin: 0;
   padding: 0;
@@ -435,13 +433,10 @@ ul {
 
   transform: rotate(-2deg);
   transform-origin: left center;
+
+  /* Updated: dropped-from-top + bounce + settle */
+  animation: kicker-drop 650ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
 }
-
-.kicker {
-animation: kicker-in 920ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
-
-}
-
 
 .lead {
   max-width: 55ch;
@@ -548,23 +543,34 @@ animation: kicker-in 920ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
   outline-offset: 3px;
 }
 
-@keyframes kicker-in {
+/* Updated keyframes: drop from top, bounce, lose momentum, settle */
+@keyframes kicker-drop {
   0% {
     opacity: 0;
-    transform: translateY(8px) rotate(-2deg);
+    transform: translateY(-26px) rotate(-2deg);
   }
 
-  60% {
-    opacity: 1;
-    transform: translateY(-2px) rotate(-2deg);
-  }
-
-  100% {
+  55% {
     opacity: 1;
     transform: translateY(0) rotate(-2deg);
   }
-}
 
+  72% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+
+  86% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  94% {
+    transform: translateY(-3px) rotate(-2deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+}
 
 /* Dashboard + secondary pie slice */
 .hero-image {
@@ -597,7 +603,6 @@ animation: kicker-in 920ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
   pointer-events: none;
   filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.2));
 }
-
 
 /* Make sure slice sits nicely on smaller screens */
 @media (max-width: 860px) {
@@ -674,7 +679,7 @@ animation: kicker-in 920ms cubic-bezier(0.22, 1, 0.36, 1) 320ms both;
   place-items: center;
   scroll-snap-align: start;
   transition: transform var(--transition), box-shadow var(--transition);
-overflow: hidden;
+  overflow: hidden;
 }
 
 .logo-item:hover {
@@ -877,7 +882,6 @@ overflow: hidden;
   display: block;
 }
 
-
 .socials {
   display: inline-flex;
   gap: 10px;
@@ -1010,6 +1014,3 @@ overflow: hidden;
 .section-tight-bottom {
   padding-bottom: clamp(16px, 3vw, 28px);
 }
-
-
-
