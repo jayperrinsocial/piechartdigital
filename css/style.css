@@ -1198,3 +1198,35 @@ ul {
 .manchester-bee {
   transition: transform 160ms ease;
 }
+
+.has-caret {
+  position: relative;
+  display: inline-block;
+}
+
+/* blinking cursor */
+.has-caret::after {
+  content: "|";
+  margin-left: 6px;
+  font-weight: 400;
+  animation: caret-blink 1.1s steps(1) infinite;
+  opacity: 1;
+}
+
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.hero-headline {
+  overflow: visible;
+  white-space: normal;
+  width: auto;
+  animation: none;
+}
