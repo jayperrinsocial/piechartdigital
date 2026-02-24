@@ -1230,3 +1230,7 @@ ul {
   width: auto;
   animation: none;
 }
+
+.section-brands {
+  padding-top: clamp(28px, 4vw, 44px);
+}
