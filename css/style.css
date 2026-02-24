@@ -1234,3 +1234,11 @@ ul {
 .section-brands {
   padding-top: clamp(28px, 4vw, 44px);
 }
+
+.section-brands .section-head {
+  text-align: center;
+}
+
+.section-brands .section-head p {
+  margin-inline: auto;
+}
