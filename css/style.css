@@ -1250,3 +1250,11 @@ ul {
 .section-brands .section-head p {
   margin-inline: auto;
 }
+.section-brands .section-head {
+  text-align: center;
+}
+
+.section-brands .section-head p {
+  margin-left: auto;
+  margin-right: auto;
+}
