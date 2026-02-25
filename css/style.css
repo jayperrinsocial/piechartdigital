@@ -1354,3 +1354,17 @@ ul {
   margin-inline: auto;
   max-width: 42ch;
 }
+
+@media (max-width: 600px) {
+  .section-brands .logo-track {
+    padding-left: 18px;          /* creates space before first logo */
+    padding-right: 18px;         /* keeps it symmetrical */
+    scroll-padding-left: 18px;   /* makes scroll-snap respect the padding */
+    scroll-padding-right: 18px;
+  }
+
+  /* small extra safety so the first circle never kisses the edge */
+  .section-brands .logo-item:first-child {
+    margin-left: 2px;
+  }
+}
