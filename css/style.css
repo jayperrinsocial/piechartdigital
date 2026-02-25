@@ -1316,3 +1316,27 @@ ul {
     padding: 0 14px;
   }
 }
+
+/* Fix mobile horizontal overflow caused by the logo scroller */
+@media (max-width: 600px) {
+  .section-brands {
+    overflow-x: hidden; /* safety net: prevents the whole page shifting */
+  }
+
+  .section-brands .logo-scroller {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-brands .logo-track {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-inline: 12px; /* slightly tighter on mobile */
+  }
+
+  /* Important: prevents flex children from forcing overflow */
+  .section-brands .brands-left {
+    min-width: 0;
+  }
+}
