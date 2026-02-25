@@ -1346,3 +1346,11 @@ ul {
     box-sizing: border-box;
   }
 }
+.what-we-do-head {
+  text-align: center;
+}
+
+.what-we-do-head p {
+  margin-inline: auto;
+  max-width: 42ch;
+}
