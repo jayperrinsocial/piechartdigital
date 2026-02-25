@@ -1340,3 +1340,9 @@ ul {
     min-width: 0;
   }
 }
+@media (max-width: 600px) {
+  .section-brands .logo-scroller {
+    overflow: hidden;      /* clip anything that sticks out */
+    box-sizing: border-box;
+  }
+}
