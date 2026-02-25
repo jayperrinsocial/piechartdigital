@@ -1258,3 +1258,15 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
+      .footer-manchester {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.manchester-text {
+  font-weight: 400; /* normal */
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
