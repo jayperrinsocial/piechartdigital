@@ -1293,3 +1293,26 @@ ul {
     padding: 0 12px;
   }
 }
+
+/* Brands section: mobile typography + centring (only affects this section) */
+@media (max-width: 600px) {
+  .section-brands .section-head {
+    text-align: center;
+  }
+
+  .section-brands .section-head h2 {
+    font-size: 1.55rem;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    padding: 0 12px;
+    text-wrap: balance;
+  }
+
+  .section-brands .section-head p {
+    font-size: 0.98rem;
+    line-height: 1.35;
+    margin: 0 auto;
+    max-width: 34ch;
+    padding: 0 14px;
+  }
+}
