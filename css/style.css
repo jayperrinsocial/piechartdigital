@@ -1394,3 +1394,31 @@ ul {
     padding-right: 0;
   }
 }
+/* MOBILE: stop first/last logo being clipped inside the rounded scroller */
+@media (max-width: 600px) {
+  .section-brands .logo-track {
+    /* keep scrolling */
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    /* make snap respect an inset */
+    scroll-padding-left: 16px;
+    scroll-padding-right: 16px;
+
+    /* remove any padding that fights spacers */
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* add invisible “gutters” inside the scroll area */
+  .section-brands .logo-track::before,
+  .section-brands .logo-track::after {
+    content: "";
+    flex: 0 0 16px;
+  }
+
+  /* just in case: stop items shrinking and causing weird snap positions */
+  .section-brands .logo-item {
+    flex: 0 0 auto;
+  }
+}
