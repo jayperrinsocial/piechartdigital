@@ -1381,3 +1381,16 @@ ul {
     margin-left: 2px;
   }
 }
+/* MOBILE FIX: prevent first logo being clipped */
+@media (max-width: 600px) {
+  .section-brands .logo-scroller {
+    padding-left: 16px;
+    padding-right: 16px;
+    overflow-x: hidden; /* keep rounded corners clean */
+  }
+
+  .section-brands .logo-track {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
