@@ -1270,3 +1270,26 @@ ul {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.8);
 }
+
+/* Brands heading tidy-up on small screens */
+@media (max-width: 600px) {
+  .section-head {
+    text-align: center;
+  }
+
+  .section-head h2 {
+    font-size: 1.6rem;     /* tweak if needed */
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+    padding: 0 10px;       /* stops edge hugging */
+  }
+
+  .section-head p {
+    font-size: 0.98rem;
+    line-height: 1.35;
+    margin: 0 auto;
+    max-width: 32ch;       /* keeps it nicely wrapped */
+    padding: 0 12px;
+  }
+}
