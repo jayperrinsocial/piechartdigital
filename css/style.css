@@ -941,7 +941,7 @@ ul {
 .footer-email {
   font-weight: 800;
   color: var(--yellow);
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 @media (max-width: 600px) {
