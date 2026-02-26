@@ -145,7 +145,6 @@
   els.forEach((el) => io.observe(el));
 })();
 
-<script>
   (function () {
     const slider = document.querySelector(".slider");
     if (!slider) return;
@@ -235,4 +234,4 @@
     update();
     start();
   })();
-</script>
+
