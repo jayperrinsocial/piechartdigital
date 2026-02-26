@@ -144,3 +144,95 @@
 
   els.forEach((el) => io.observe(el));
 })();
+
+<script>
+  (function () {
+    const slider = document.querySelector(".slider");
+    if (!slider) return;
+
+    const track = slider.querySelector(".slider-track");
+    const slides = Array.from(slider.querySelectorAll(".slide"));
+    const prevBtn = slider.querySelector(".slider-btn.prev");
+    const nextBtn = slider.querySelector(".slider-btn.next");
+    const dotsWrap = slider.querySelector(".slider-dots");
+
+    let index = 0;
+    let timer = null;
+    const interval = Number(slider.dataset.interval || 4200);
+
+    // Build dots
+    const dots = slides.map((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "slider-dot" + (i === 0 ? " is-active" : "");
+      b.setAttribute("aria-label", "Go to slide " + (i + 1));
+      b.addEventListener("click", () => goTo(i));
+      dotsWrap.appendChild(b);
+      return b;
+    });
+
+    function update() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
+      dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+    }
+
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      update();
+      restart();
+    }
+
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+
+    prevBtn.addEventListener("click", prev);
+    nextBtn.addEventListener("click", next);
+
+    function start() {
+      stop();
+      timer = setInterval(next, interval);
+    }
+
+    function stop() {
+      if (timer) clearInterval(timer);
+      timer = null;
+    }
+
+    function restart() {
+      start();
+    }
+
+    // Pause on hover and focus
+    slider.addEventListener("mouseenter", stop);
+    slider.addEventListener("mouseleave", start);
+    slider.addEventListener("focusin", stop);
+    slider.addEventListener("focusout", start);
+
+    // Basic swipe support
+    let startX = 0;
+    let dragging = false;
+
+    slider.addEventListener("touchstart", (e) => {
+      dragging = true;
+      startX = e.touches[0].clientX;
+      stop();
+    }, { passive: true });
+
+    slider.addEventListener("touchend", (e) => {
+      if (!dragging) return;
+      dragging = false;
+
+      const endX = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientX : startX;
+      const dx = endX - startX;
+
+      if (Math.abs(dx) > 40) {
+        dx < 0 ? next() : prev();
+      }
+      start();
+    });
+
+    update();
+    start();
+  })();
+</script>
