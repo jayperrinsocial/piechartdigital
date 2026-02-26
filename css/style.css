@@ -941,6 +941,13 @@ ul {
 .footer-email {
   font-weight: 800;
   color: var(--yellow);
+  font-size: 2em;
+}
+
+@media (max-width: 600px) {
+  .footer-email {
+    font-size: 1.7em;
+  }
 }
 
 .footer-email:hover {
