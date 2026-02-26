@@ -1259,3 +1259,12 @@ ul {
     flex: 0 0 auto;
   }
 }
+.what-we-do-head {
+  text-align: center;
+}
+
+.what-we-do-head p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42ch;
+}
