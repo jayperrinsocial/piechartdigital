@@ -1404,3 +1404,57 @@ ul {
     font-size: 1.7rem;
   }
 }
+
+/* Clickable service cards */
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  padding: 20px;
+}
+
+/* Icon area */
+.card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  border: var(--border);
+  background: var(--grey-50);
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.06);
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+}
+
+.card-icon-placeholder {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Hover CTA text */
+.card-cta {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+/* Keep your existing lift, add CTA reveal */
+.card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 0 rgba(0, 0, 0, 0.06);
+}
+
+.card-link:hover .card-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Make the whole card feel clickable */
+.card-link:focus-visible {
+  outline: 3px solid rgba(0, 0, 0, 0.9);
+  outline-offset: 4px;
+}
