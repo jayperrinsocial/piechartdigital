@@ -939,7 +939,7 @@ ul {
 }
 
 .footer-email {
-  font-weight: 800;
+  font-weight: 700;
   color: var(--yellow);
   font-size: 1.8em;
 }
@@ -1536,4 +1536,7 @@ ul {
   .card-image {
     max-width: 180px;
   }
+}
+.footer-manchester {
+  color: var(--yellow);
 }
