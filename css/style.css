@@ -1543,3 +1543,16 @@ ul {
 .footer-manchester .manchester-text {
   color: var(--yellow);
 }
+
+.card h3 {
+  font-size: 2.4rem;   /* roughly 2× your current ~1.2rem */
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .card h3 {
+    font-size: 1.9rem;   /* ~1.5× mobile */
+    line-height: 1.2;
+  }
+}
