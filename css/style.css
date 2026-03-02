@@ -1458,3 +1458,71 @@ ul {
   outline: 3px solid rgba(0, 0, 0, 0.9);
   outline-offset: 4px;
 }
+
+/* WHAT WE DO – image-led cards */
+
+.card.card-link {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Large decorative image at top of card */
+.card-image {
+  width: 100%;
+  max-width: 160px;
+  margin: 0 0 14px;
+  align-self: flex-start;
+}
+
+/* Headings spacing */
+.card h3 {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+/* Description stays readable but tighter */
+.card p {
+  font-size: 0.98rem;
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+/* CTA styling */
+.card-cta {
+  margin-top: auto;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  opacity: 0.85;
+  transition: opacity var(--transition);
+}
+
+/* Hover lift + emphasis */
+.card-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 0 rgba(0, 0, 0, 0.08);
+}
+
+.card-link:hover .card-cta {
+  opacity: 1;
+}
+
+/* Mobile tweaks */
+@media (max-width: 900px) {
+  .card-image {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    text-align: left;
+  }
+
+  .card-image {
+    max-width: 120px;
+  }
+}
