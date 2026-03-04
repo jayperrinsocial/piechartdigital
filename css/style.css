@@ -1602,3 +1602,14 @@ ul {
 .section-alt .card-grid > .card.card-link .card-cta {
   align-self: flex-start;    /* keep CTA left aligned */
 }
+/* What we do card headings slightly smaller */
+.section-alt .card-grid .card h3 {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+@media (max-width: 600px) {
+  .section-alt .card-grid .card h3 {
+    font-size: 1.6rem;
+  }
+}
