@@ -1577,3 +1577,8 @@ ul {
 .section-alt .card-grid > .card.card-link .card-cta {
   align-self: center;
 }
+/* Keep CTA left aligned even though card content is centred */
+.section-alt .card-grid > .card.card-link .card-cta {
+  align-self: flex-start;
+  text-align: left;
+}
