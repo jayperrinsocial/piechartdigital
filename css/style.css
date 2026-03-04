@@ -1582,3 +1582,23 @@ ul {
   align-self: flex-start;
   text-align: left;
 }
+/* What we do: image centred, text left-aligned */
+.section-alt .card-grid > .card.card-link {
+  align-items: flex-start;   /* left align text content again */
+  text-align: left;
+}
+
+.section-alt .card-grid > .card.card-link .card-image {
+  align-self: center;        /* keep the image centred */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-alt .card-grid > .card.card-link p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.section-alt .card-grid > .card.card-link .card-cta {
+  align-self: flex-start;    /* keep CTA left aligned */
+}
