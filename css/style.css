@@ -1914,3 +1914,54 @@ ul {
   }
 
 }
+/* Neurodivergent footer card */
+
+.footer-nd-card {
+  position: relative;
+  margin-top: 26px;
+  padding: 16px 18px 16px 18px;
+
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 280px;
+
+  box-shadow: 0 10px 0 rgba(0,0,0,0.18);
+}
+
+.footer-nd-tick {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+
+  width: 28px;
+  height: 28px;
+
+  background: #ffd200;
+  color: #000;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 800;
+  font-size: 14px;
+
+  box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+}
+
+.footer-nd-title {
+  margin: 0 0 6px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000;
+}
+
+.footer-nd-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #444;
+}
