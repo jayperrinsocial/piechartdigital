@@ -589,7 +589,7 @@ ul {
 }
 
 .chip-link:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -764,7 +764,7 @@ ul {
 }
 
 .logo-item:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow: 0 12px 0 rgba(0, 0, 0, 0.08);
 }
 
@@ -840,7 +840,7 @@ ul {
 }
 
 .card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow: 0 14px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -980,7 +980,7 @@ ul {
 }
 
 .social:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -1152,7 +1152,7 @@ ul {
 }
 
 .footer-manchester:hover .manchester-bee {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 .has-caret {
@@ -1444,7 +1444,7 @@ ul {
 
 /* Keep your existing lift, add CTA reveal */
 .card-link:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow: 0 14px 0 rgba(0, 0, 0, 0.06);
 }
 
