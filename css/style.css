@@ -938,26 +938,27 @@ h3 {
 }
 
 .ticks li {
-  position: relative;
-  padding-left: 26px;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: start;
+  column-gap: 10px;
   color: rgba(0, 0, 0, 0.82);
   font-weight: 600;
 }
 
 .ticks li::before {
   content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   border-radius: 8px;
   display: grid;
   place-items: center;
   background: var(--yellow);
   border: 2px solid rgba(0, 0, 0, 0.18);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 900;
+  line-height: 1;
+  transform: translateY(0.08em);
 }
 
 /* ------------------------------
@@ -1001,13 +1002,13 @@ h3 {
 .why-grid li {
   font-size: 1.3rem;
   font-weight: 700;
-  line-height: 1.45;
+  line-height: 1.32;
+  grid-template-columns: 24px 1fr;
+  column-gap: 12px;
 }
 
 .why-grid li::before {
-  width: 24px;
-  height: 24px;
-  font-size: 14px;
+  transform: translateY(0.12em);
 }
 
 .why-cta {
@@ -1079,11 +1080,18 @@ h3 {
     line-height: 1.4;
   }
 
-  .why-grid li::before {
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-  }
+.why-grid li {
+  grid-template-columns: 20px 1fr;
+  column-gap: 10px;
+}
+
+.why-grid li::before {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 7px;
+  transform: translateY(0.1em);
+}
 
   .why-pie-server {
     width: 145px;
