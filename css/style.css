@@ -1363,7 +1363,11 @@ h3 {
     margin-top: 14px;
   }
 }
-
+.blog-preview-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
 /* ------------------------------
    Footer
 ------------------------------ */
