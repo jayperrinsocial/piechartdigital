@@ -1850,3 +1850,12 @@ h3 {
 .services-hero__inner {
   max-width: 720px;
 }
+.services-hero {
+  background: var(--yellow);
+  padding: clamp(32px, 4vw, 56px) 0;
+  position: relative;
+  overflow: hidden;
+}
+.services-hero__inner p {
+  margin-top: 10px;
+}
