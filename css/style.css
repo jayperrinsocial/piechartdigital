@@ -1975,7 +1975,7 @@ h3 {
   position: absolute;
   top: 0;
   right: clamp(20px, 8vw, 160px);
-  width: clamp(200px, 18vw, 280px);
+  width: clamp(20px, 18vw, 280px);
   height: auto;
   pointer-events: none;
   z-index: 1;
