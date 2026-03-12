@@ -1958,3 +1958,34 @@ h3 {
   height: auto;
   pointer-events: none;
 }
+.services-hero {
+  background: var(--yellow);
+  padding: clamp(32px, 4vw, 56px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ensure text sits above background elements */
+.services-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.services-hero-pie {
+  position: absolute;
+  top: 0;
+  right: clamp(60px, 8vw, 160px);
+  width: clamp(200px, 18vw, 280px);
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+@media (max-width: 900px) {
+
+  .services-hero-pie {
+    right: -30px;
+    width: clamp(140px, 40vw, 200px);
+    opacity: 0.9;
+  }
+
+}
