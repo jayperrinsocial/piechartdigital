@@ -1898,3 +1898,33 @@ h3 {
     padding: 20px;
   }
 }
+.services-hero {
+  background: var(--yellow);
+  padding: clamp(32px, 4vw, 56px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-hero-pie {
+  position: absolute;
+  right: clamp(40px, 6vw, 120px);
+  top: -10px;
+  width: clamp(160px, 18vw, 260px);
+  height: auto;
+  pointer-events: none;
+}
+.services-hero {
+  background: var(--yellow);
+  padding: clamp(32px, 4vw, 56px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-hero-pie {
+  position: absolute;
+  right: clamp(40px, 6vw, 120px);
+  top: -10px;
+  width: clamp(160px, 18vw, 260px);
+  height: auto;
+  pointer-events: none;
+}
