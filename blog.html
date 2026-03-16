@@ -8,63 +8,59 @@
     name="description"
     content="Helpful reads on paid ads, websites, creative strategy and digital marketing from Piechart Digital."
   />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="site-brand" aria-label="Piechart Digital home">
-        <span class="site-brand__mark">◔</span>
-        <span class="site-brand__text">Piechart Digital</span>
+      <a class="brand" href="index.html" aria-label="Piechart Digital home">
+        <img src="image/logo-piechart.png" alt="" class="brand-logo" />
+        <span class="brand-stack">
+          <span class="brand-name">Piechart Digital</span>
+          <span class="brand-tagline">Manchester-based performance marketing studio</span>
+        </span>
       </a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open menu"
+      >
+        <span class="nav-toggle-lines"><span></span></span>
       </button>
 
-      <nav class="site-nav" aria-label="Main navigation">
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="blog.html" class="is-current">Blog</a></li>
-          <li><a href="contact.html" class="nav-cta">Let’s Talk</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="blog-hero-section">
+  <main id="main">
+    <section class="blog-hero">
       <div class="container">
-        <div class="blog-hero">
-          <p class="blog-hero__eyebrow">Insights & ideas</p>
-          <h1>Blog</h1>
-          <p class="blog-hero__intro">
-            Helpful reads on paid ads, websites, creative strategy and digital marketing that actually moves the needle.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="blog-intro-section">
-      <div class="container">
-        <div class="blog-section-heading">
-          <span class="blog-pill-label">Fresh from Piechart</span>
-          <h2>Noteworthy reads from the studio</h2>
+        <div class="blog-hero__inner">
+          <p class="section-kicker">Blog</p>
+          <h1>Helpful reads, useful thinking, and practical marketing insight.</h1>
           <p>
-            A growing library of articles, guides and opinion pieces. For now these are placeholder posts,
-            ready to link through to individual blog pages later.
+            Placeholder posts for now, but this page is ready for articles on paid ads,
+            websites, creative strategy, landing pages, reporting and brand growth.
           </p>
         </div>
       </div>
@@ -73,125 +69,110 @@
     <section class="blog-grid-section">
       <div class="container">
         <div class="blog-grid">
-
-          <article class="blog-card blog-card--image">
-            <a href="blog-post.html" class="blog-card__image-link">
-              <img src="/image/blog-01.jpg" alt="Placeholder image for paid social blog post" />
+          <article class="blog-panel blog-panel--image">
+            <a href="blog-post.html" class="blog-panel__image-link" aria-label="Read blog post about paid social mistakes">
+              <img src="image/blog-placeholder-1.jpg" alt="Placeholder blog image" />
             </a>
           </article>
 
-          <article class="blog-card blog-card--text">
-            <div class="blog-card__content">
-              <span class="blog-card__tag">Paid Social</span>
-              <h3>7 paid social mistakes local brands still make</h3>
+          <article class="blog-panel blog-panel--content">
+            <div class="blog-panel__content">
+              <p class="blog-panel__eyebrow">Paid Social</p>
+              <h2>7 paid social mistakes local brands still make</h2>
               <p>
-                A practical look at the most common Meta ad issues we still see, from weak creative to badly structured campaigns.
+                A practical look at weak creative, bad structure, poor offers and the simple fixes
+                that make campaigns more effective.
               </p>
-              <a href="blog-post.html" class="blog-card__button">
-                <span>Read blog</span>
-                <span class="blog-card__button-icon">+</span>
-              </a>
+              <a href="blog-post.html" class="blog-panel__button">Read blog</a>
             </div>
           </article>
 
-          <article class="blog-card blog-card--text">
-            <div class="blog-card__content">
-              <span class="blog-card__tag">Web Design</span>
-              <h3>Why your website needs to earn attention in five seconds</h3>
+          <article class="blog-panel blog-panel--content">
+            <div class="blog-panel__content">
+              <p class="blog-panel__eyebrow">Web Design</p>
+              <h2>Why your website needs to earn attention in five seconds</h2>
               <p>
-                First impressions count. Here’s how layout, messaging and calls to action shape whether visitors stay or bounce.
+                Messaging, hierarchy and layout all matter quickly. Here’s what helps people stay,
+                trust you, and actually click.
               </p>
-              <a href="blog-post.html" class="blog-card__button">
-                <span>Read blog</span>
-                <span class="blog-card__button-icon">+</span>
-              </a>
+              <a href="blog-post.html" class="blog-panel__button">Read blog</a>
             </div>
           </article>
 
-          <article class="blog-card blog-card--image">
-            <a href="blog-post.html" class="blog-card__image-link">
-              <img src="/image/blog-02.jpg" alt="Placeholder image for website design blog post" />
+          <article class="blog-panel blog-panel--image">
+            <a href="blog-post.html" class="blog-panel__image-link" aria-label="Read blog post about website attention">
+              <img src="image/blog-placeholder-2.jpg" alt="Placeholder blog image" />
             </a>
           </article>
 
-          <article class="blog-card blog-card--image">
-            <a href="blog-post.html" class="blog-card__image-link">
-              <img src="/image/blog-03.jpg" alt="Placeholder image for conversion blog post" />
+          <article class="blog-panel blog-panel--image">
+            <a href="blog-post.html" class="blog-panel__image-link" aria-label="Read blog post about service pages">
+              <img src="image/blog-placeholder-3.jpg" alt="Placeholder blog image" />
             </a>
           </article>
 
-          <article class="blog-card blog-card--text">
-            <div class="blog-card__content">
-              <span class="blog-card__tag">Conversion</span>
-              <h3>What makes a service page actually convert?</h3>
+          <article class="blog-panel blog-panel--content">
+            <div class="blog-panel__content">
+              <p class="blog-panel__eyebrow">Conversion</p>
+              <h2>What makes a service page actually convert?</h2>
               <p>
-                The structure, copy and trust signals that help turn a nice-looking page into something commercially useful.
+                A simple breakdown of trust signals, page structure, calls to action and clarity
+                that make service pages work harder.
               </p>
-              <a href="blog-post.html" class="blog-card__button">
-                <span>Read blog</span>
-                <span class="blog-card__button-icon">+</span>
-              </a>
+              <a href="blog-post.html" class="blog-panel__button">Read blog</a>
             </div>
           </article>
 
-          <article class="blog-card blog-card--text">
-            <div class="blog-card__content">
-              <span class="blog-card__tag">Brand</span>
-              <h3>How to build a brand that feels clear and memorable</h3>
+          <article class="blog-panel blog-panel--content">
+            <div class="blog-panel__content">
+              <p class="blog-panel__eyebrow">Brand</p>
+              <h2>How to build a brand that feels clear and memorable</h2>
               <p>
-                Strong branding is not just a logo. It is consistency, confidence and knowing exactly how you want to show up.
+                Brand is not just visuals. It is consistency, point of view, tone, and showing up
+                in a way people remember.
               </p>
-              <a href="blog-post.html" class="blog-card__button">
-                <span>Read blog</span>
-                <span class="blog-card__button-icon">+</span>
-              </a>
+              <a href="blog-post.html" class="blog-panel__button">Read blog</a>
             </div>
           </article>
 
-          <article class="blog-card blog-card--image">
-            <a href="blog-post.html" class="blog-card__image-link">
-              <img src="/image/blog-04.jpg" alt="Placeholder image for branding blog post" />
+          <article class="blog-panel blog-panel--image">
+            <a href="blog-post.html" class="blog-panel__image-link" aria-label="Read blog post about brand building">
+              <img src="image/blog-placeholder-4.jpg" alt="Placeholder blog image" />
             </a>
           </article>
 
-          <article class="blog-card blog-card--image">
-            <a href="blog-post.html" class="blog-card__image-link">
-              <img src="/image/blog-05.jpg" alt="Placeholder image for reporting blog post" />
+          <article class="blog-panel blog-panel--image">
+            <a href="blog-post.html" class="blog-panel__image-link" aria-label="Read blog post about reporting">
+              <img src="image/blog-placeholder-5.jpg" alt="Placeholder blog image" />
             </a>
           </article>
 
-          <article class="blog-card blog-card--text">
-            <div class="blog-card__content">
-              <span class="blog-card__tag">Reporting</span>
-              <h3>Simple reporting tips clients actually understand</h3>
+          <article class="blog-panel blog-panel--content">
+            <div class="blog-panel__content">
+              <p class="blog-panel__eyebrow">Reporting</p>
+              <h2>Simple reporting tips clients actually understand</h2>
               <p>
-                Better reporting is not about more charts. It is about clarity, context and making the next decision easier.
+                Better reporting is about clarity and decision-making, not drowning people in graphs
+                they will never act on.
               </p>
-              <a href="blog-post.html" class="blog-card__button">
-                <span>Read blog</span>
-                <span class="blog-card__button-icon">+</span>
-              </a>
+              <a href="blog-post.html" class="blog-panel__button">Read blog</a>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <section class="blog-cta-section">
+    <section class="blog-callout">
       <div class="container">
-        <div class="blog-cta-box">
-          <div class="blog-cta-box__text">
-            <span class="blog-pill-label">Need support?</span>
-            <h2>Want help with ads, web or creative?</h2>
-            <p>
-              If your brand needs sharper strategy, better creative or a website that works harder, let’s chat.
-            </p>
-          </div>
+        <div class="blog-callout__inner">
+          <div class="blog-callout__pill">Need support?</div>
 
-          <div class="blog-cta-box__action">
-            <a href="contact.html" class="blog-text-link">Start a project</a>
-          </div>
+          <h2>Want help with ads, web or creative?</h2>
+
+          <p>
+            If your brand needs sharper strategy, stronger creative or a website that works harder,
+            <a href="contact.html">get in touch</a>.
+          </p>
         </div>
       </div>
     </section>
@@ -199,23 +180,65 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="site-brand site-brand--footer">
-          <span class="site-brand__mark">◔</span>
-          <span class="site-brand__text">Piechart Digital</span>
-        </a>
-        <p>Paid media, web design and creative that helps brands grow.</p>
+      <div class="footer-left">
+        <div class="footer-brand">
+          <img src="image/logo-piechart.png" alt="Piechart Digital logo" class="footer-logo" />
+          <strong>Piechart Digital</strong>
+        </div>
+        <p class="footer-note">Bold marketing, clean execution.</p>
       </div>
 
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="team.html">Team</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
       </nav>
+
+      <div class="footer-right">
+        <a class="footer-email" href="mailto:hello@piechartdigital.co.uk">
+          hello@piechartdigital.co.uk
+        </a>
+
+        <div class="socials">
+          <a class="social" href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2.01 2.01 0 0 0 3.25 5c0 1.1.9 2 2 2s2-.9 2-2a2.01 2.01 0 0 0-2-2ZM20.75 12.65c0-3.03-1.62-4.44-3.78-4.44-1.74 0-2.52.96-2.96 1.63V8.5h-3.37c.04.89 0 11.5 0 11.5h3.37v-6.42c0-.34.02-.68.13-.92.27-.68.88-1.38 1.9-1.38 1.34 0 1.88 1.02 1.88 2.52V20h3.37v-7.35Z"/>
+            </svg>
+          </a>
+
+          <a class="social" href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.75 3h8.5A4.75 4.75 0 0 1 21 7.75v8.5A4.75 4.75 0 0 1 16.25 21h-8.5A4.75 4.75 0 0 1 3 16.25v-8.5A4.75 4.75 0 0 1 7.75 3Zm0 1.8A2.95 2.95 0 0 0 4.8 7.75v8.5a2.95 2.95 0 0 0 2.95 2.95h8.5a2.95 2.95 0 0 0 2.95-2.95v-8.5a2.95 2.95 0 0 0-2.95-2.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"/>
+            </svg>
+          </a>
+
+          <a class="social" href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.5 21v-7.4h2.48l.37-2.88H13.5V8.88c0-.83.23-1.4 1.43-1.4h1.52V4.9c-.26-.03-1.15-.1-2.18-.1-2.16 0-3.64 1.32-3.64 3.75v2.17H8.2v2.88h2.43V21h2.87Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <p class="footer-small">© 2026 Piechart Digital</p>
+
+        <div class="footer-nd-card">
+          <span class="footer-nd-tick">✓</span>
+          <p class="footer-nd-title">Neurodivergent friendly</p>
+          <p class="footer-nd-text">
+            Clear communication & flexible ways of working. Find out more
+            <a href="#">here</a>.
+          </p>
+        </div>
+
+        <div class="footer-manchester">
+          <img src="image/manchester-bee.png" alt="Manchester bee" class="manchester-bee" />
+          <span class="manchester-text">Made in Manchester</span>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -225,9 +248,8 @@
 
     if (navToggle && siteNav) {
       navToggle.addEventListener("click", () => {
-        const expanded = navToggle.getAttribute("aria-expanded") === "true";
-        navToggle.setAttribute("aria-expanded", String(!expanded));
-        siteNav.classList.toggle("is-open");
+        const isOpen = siteNav.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
     }
   </script>
