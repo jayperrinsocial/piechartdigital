@@ -2287,7 +2287,7 @@ h3 {
 }
 .blog-hero-pie {
   position: absolute;
-  right: clamp(10px, 5vw, 100px);
+  right: clamp(80px, 75vw, 300px);
   top: 50%;
   transform: translateY(-50%);
   width: clamp(180px, 20vw, 300px);
