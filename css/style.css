@@ -1605,7 +1605,7 @@ h3 {
 .services-hero-pie {
   position: absolute;
   top: 0;
-  right: clamp(50px, 8vw, 80px);
+  right: clamp(500px, 48vw, 480px);
   width: clamp(180px, 18vw, 280px);
   height: auto;
   pointer-events: none;
