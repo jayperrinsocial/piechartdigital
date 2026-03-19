@@ -2553,5 +2553,9 @@ h3 {
   color: var(--yellow);
 }
 .blog-article {
-  padding-top: 24px; /* was 48px */
+  padding-top: 20px;
+}
+
+.blog-article__container {
+  margin-top: 20px; /* was 40px */
 }
