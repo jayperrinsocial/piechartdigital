@@ -234,4 +234,6 @@
     update();
     start();
   })();
-
+if (document.querySelector(".blog-content")) {
+  // run script
+}
