@@ -2794,14 +2794,15 @@ h3 {
 }
 .contact-hero-pie {
   position: absolute;
-  right: clamp(10px, 18vw, 600px);
+  right: clamp(200px, 125vw, 500px);
   top: 50%;
   transform: translateY(-50%);
-  width: clamp(200px, 20vw, 280px);
+  width: clamp(180px, 20vw, 300px);
   height: auto;
   pointer-events: none;
   z-index: 1;
 }
+
 
 @media (max-width: 900px) {
   .contact-hero-pie {
