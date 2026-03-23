@@ -2893,3 +2893,14 @@ h3 {
     display: none;
   }
 }
+.header-socials {
+  display: flex;
+  gap: 10px;
+  margin-right: 16px;
+}
+
+@media (max-width: 768px) {
+  .header-socials {
+    display: none;
+  }
+}
