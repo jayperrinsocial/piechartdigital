@@ -2923,3 +2923,6 @@ h3 {
     max-width: 680px;
   }
 }
+.section-blog-preview {
+  padding-top: 24px;
+}
