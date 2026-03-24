@@ -2934,3 +2934,16 @@ h3 {
     transform: rotate(-4deg);
   }
 }
+.blog-template-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 8px;
+}
+
+@media (max-width: 640px) {
+  .blog-template-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
