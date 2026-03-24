@@ -2948,13 +2948,13 @@ h3 {
   }
 }
 .careers-email {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 800;
   display: inline-block;
   margin-top: 6px;
 }
 @media (max-width: 600px) {
   .careers-email {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 }
