@@ -2976,3 +2976,26 @@ h3 {
     transform: translateX(20px);
   }
 }
+/* ==============================
+   Hero image scaling (desktop)
+============================== */
+
+@media (min-width: 1100px) {
+
+  /* Make the studio image larger */
+  .hero-dashboard {
+    max-width: 820px;
+  }
+
+  /* Give the image more space vs text */
+  .hero-grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+/* Optional: extra large screens */
+@media (min-width: 1300px) {
+  .hero-dashboard {
+    max-width: 900px;
+  }
+}
