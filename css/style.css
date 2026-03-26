@@ -3184,3 +3184,8 @@ h3 {
     display: none;
   }
 }
+@media (min-width: 900px) {
+  .hero-pie-slice {
+    bottom: clamp(-120px, -8vw, -80px);
+  }
+}
