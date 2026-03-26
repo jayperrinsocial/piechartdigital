@@ -3166,3 +3166,8 @@ h3 {
     padding: 12px 20px;
   }
 }
+@media (max-width: 900px) {
+  .blog-preview-grid article:nth-child(3) {
+    display: none;
+  }
+}
