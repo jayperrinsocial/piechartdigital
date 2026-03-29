@@ -3189,3 +3189,8 @@ h3 {
     bottom: clamp(-120px, -8vw, -80px);
   }
 }
+@media (max-width: 640px) {
+  .blog-preview-footer {
+    margin-top: 20px;
+  }
+}
