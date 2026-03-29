@@ -3341,7 +3341,7 @@ h3 {
 
 .neuro-hero-pie {
   position: absolute;
-  right: 6%;
+  right: 20%;
   bottom: -20px;
   width: clamp(220px, 28vw, 360px);
   height: auto;
@@ -3385,7 +3385,7 @@ h3 {
 }
 .neuro-hero-pie {
   position: absolute;
-  right: 20%; /* was ~6% — brings it closer to the text */
+  right: 40%; /* was ~6% — brings it closer to the text */
   top: 50%;
   transform: translateY(-50%);
   width: clamp(260px, 32vw, 420px); /* bigger */
