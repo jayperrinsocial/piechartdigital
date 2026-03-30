@@ -3602,3 +3602,10 @@ h3 {
 .portfolio-card__image {
   height: 180px;
 }
+@media (max-width: 768px) {
+  .services-hero-pie {
+    width: 105px;
+    right: 6px;
+    top: 8px;
+  }
+}
