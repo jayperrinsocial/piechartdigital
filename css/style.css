@@ -3535,3 +3535,67 @@ h3 {
     align-self: flex-start;
   }
 }
+@media (max-width: 767px) {
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .portfolio-card {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+  }
+
+  .portfolio-card__link {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* 🔻 Smaller image */
+  .portfolio-card__image {
+    width: 100%;
+    height: 200px; /* was 260 */
+    object-fit: cover;
+    display: block;
+  }
+
+  /* 🔻 Kill overlay behaviour */
+  .portfolio-card__overlay {
+    position: static;
+    transform: none;
+    min-height: auto;
+    background: rgba(33, 33, 37, 0.96);
+  }
+
+  /* 🔻 Reduce padding */
+  .portfolio-card__content {
+    padding: 16px 16px 16px;
+    min-height: auto;
+  }
+
+  /* 🔻 Smaller title */
+  .portfolio-card__content h2 {
+    font-size: 1.6rem;
+    line-height: 1.05;
+    margin-bottom: 6px;
+  }
+
+  /* 🔻 Tighter description */
+  .portfolio-card__content p {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  /* 🔻 Smaller button */
+  .portfolio-card__cta {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    min-height: 44px;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.18);
+  }
+}
