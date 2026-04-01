@@ -3312,7 +3312,7 @@ h3 {
 .neuro-hero-pie {
   position: absolute;
   top: 50%;
-right: clamp(40px, 6vw, 120px);
+right: clamp(180px, 105vw, 400px);
    transform: translateY(-50%);
    width: clamp(260px, 36vw, 480px);
   height: auto;
