@@ -3612,7 +3612,7 @@ right: clamp(200px, 125vw, 500px);
   }
 
   .card-image {
-    max-width: 150px;
+    max-width: 130px;
     margin: 0 auto 10px;
   }
 
