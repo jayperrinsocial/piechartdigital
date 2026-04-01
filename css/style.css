@@ -3592,7 +3592,7 @@ right: clamp(200px, 125vw, 500px);
   }
 }
 .header-phone {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.15rem;
 }
 @media (max-width: 600px) {
