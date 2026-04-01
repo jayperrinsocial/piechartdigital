@@ -3637,3 +3637,10 @@ right: clamp(200px, 125vw, 500px);
     box-shadow: 0 8px 0 rgba(0, 0, 0, 0.12);
   }
 }
+@media (min-width: 900px) {
+  .service-chips {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+}
