@@ -3315,7 +3315,7 @@ h3 {
  right: clamp(200px, 125vw, 500px); 
    top: 50%; 
    transform: translateY(-50%);
-   width: clamp(180px, 20vw, 300px);
+   width: clamp(240px, 30vw, 400px);
   height: auto;
   pointer-events: none;
   z-index: 1;
