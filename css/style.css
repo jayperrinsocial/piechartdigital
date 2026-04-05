@@ -3887,3 +3887,11 @@ right: clamp(200px, 125vw, 500px);
     flex: 0 0 auto;
   }
 }
+@media (max-width: 560px) {
+  .why-pie-server {
+    width: 360px;
+    left: 0;
+    bottom: -100px;
+    transform: rotate(-4deg);
+  }
+}
