@@ -3838,3 +3838,52 @@ right: clamp(200px, 125vw, 500px);
     min-height: 220px;
   }
 }
+@media (max-width: 600px) {
+  .section-brands {
+    overflow-x: hidden;
+  }
+
+  .section-brands .section-head h2 {
+    font-size: 1.55rem;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    padding: 0 12px;
+    text-wrap: balance;
+  }
+
+  .section-brands .section-head p {
+    font-size: 0.98rem;
+    line-height: 1.35;
+    margin: 0 auto;
+    max-width: 34ch;
+    padding: 0 14px;
+  }
+
+  .section-brands .logo-scroller {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .section-brands .logo-track {
+    display: flex;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 22px 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scroll-padding-left: 16px;
+  }
+
+  .section-brands .logo-track::before,
+  .section-brands .logo-track::after {
+    content: none;
+  }
+
+  .section-brands .logo-item {
+    flex: 0 0 auto;
+  }
+}
