@@ -3895,3 +3895,9 @@ right: clamp(200px, 125vw, 500px);
     transform: rotate(-4deg);
   }
 }
+@media (max-width: 560px) {
+  .why-pie-server {
+    width: 360px !important;
+    outline: 3px solid red;
+  }
+}
