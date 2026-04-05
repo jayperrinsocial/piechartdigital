@@ -2845,11 +2845,11 @@ h3 {
 }
 @media (max-width: 560px) {
   .why-pie-server {
-    width: clamp(200px, 55vw, 320px);
-    left: 0;
-    bottom: -20px;
-    transform: rotate(-6deg);
-  }
+  width: 380px;
+  left: -20px;
+  bottom: -60px;
+  transform: rotate(-4deg);
+}
 }
 .header-inner {
   display: flex;
