@@ -3919,3 +3919,8 @@ right: clamp(200px, 125vw, 500px);
   border: var(--border);
   box-shadow: 0 12px 0 rgba(0, 0, 0, 0.06);
 }
+.portfolio-pie {
+  width: clamp(160px, 20vw, 240px);
+  max-width: 100%;
+  margin: 0 auto 16px;
+}
