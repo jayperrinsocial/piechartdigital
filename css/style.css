@@ -4001,3 +4001,16 @@ right: clamp(200px, 125vw, 500px);
     padding-bottom: 90px !important;
   }
 }
+@media (max-width: 768px) {
+  .why-wrap {
+    padding-bottom: 140px !important;
+  }
+
+  .why-pie-server {
+    width: 260px !important;
+    left: 8px !important;
+    bottom: -60px !important;
+    transform: rotate(-4deg) !important;
+    opacity: 0.98;
+  }
+}
