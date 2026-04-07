@@ -2287,6 +2287,7 @@ h3 {
   pointer-events: none;
   z-index: 1;
 }
+
 @media (max-width: 900px) {
   .blog-hero-pie {
     position: static;
@@ -3932,4 +3933,14 @@ right: clamp(200px, 125vw, 500px);
   width: 220px;
   max-width: 100%;
   margin: 0 auto 16px;
+}
+.blog-pie-writer {
+  position: absolute;
+  right: clamp(250px, 125vw, 500px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(180px, 20vw, 300px);
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
 }
