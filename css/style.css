@@ -3944,3 +3944,8 @@ right: clamp(200px, 125vw, 500px);
   pointer-events: none;
   z-index: 1;
 }
+@media (max-width: 768px) {
+  .blog-pie-writer {
+    display: none;
+  }
+}
