@@ -3988,3 +3988,16 @@ right: clamp(200px, 125vw, 500px);
     opacity: 0.98;
   }
 }
+@media (max-width: 768px) {
+  .why-pie-server {
+    width: 260px !important;
+    left: 8px !important;
+    bottom: 20px !important;
+    transform: rotate(-4deg) !important;
+    opacity: 0.98;
+  }
+
+  .why-wrap {
+    padding-bottom: 90px !important;
+  }
+}
