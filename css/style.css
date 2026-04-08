@@ -4160,9 +4160,14 @@ right: clamp(200px, 125vw, 500px);
 }
 
 @media (max-width: 640px) {
+  .testimonial-slider {
+    position: relative;
+  }
+
   .testimonial-card {
+    position: relative;
     max-width: calc(100% - 24px);
-    padding: 24px 18px;
+    padding: 24px 56px;
     border-radius: 20px;
   }
 
@@ -4190,24 +4195,25 @@ right: clamp(200px, 125vw, 500px);
     width: 40px;
     height: 40px;
     font-size: 24px;
-    top: auto;
-    bottom: -58px;
-    transform: none;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    z-index: 3;
   }
 
   .testimonial-btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(calc(-50% - 2px));
   }
 
   .testimonial-btn-prev {
-    left: calc(50% - 52px);
+    left: 8px;
   }
 
   .testimonial-btn-next {
-    right: calc(50% - 52px);
+    right: 8px;
   }
 
   .testimonial-dots {
-    margin-top: 34px;
+    margin-top: 20px;
   }
 }
