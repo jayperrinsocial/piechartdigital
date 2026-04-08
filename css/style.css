@@ -4218,3 +4218,9 @@ right: clamp(200px, 125vw, 500px);
     margin-top: 20px;
   }
 }
+.testimonial-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills circle nicely */
+  border-radius: 999px;
+}
