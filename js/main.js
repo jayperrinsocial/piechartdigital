@@ -237,3 +237,93 @@
 if (document.querySelector(".blog-content")) {
   // run script
 }
+const testimonialSliders = document.querySelectorAll("[data-testimonial-slider]");
+
+testimonialSliders.forEach((slider) => {
+  const track = slider.querySelector(".testimonial-track");
+  const slides = Array.from(slider.querySelectorAll(".testimonial-slide"));
+  const prevBtn = slider.querySelector(".testimonial-btn-prev");
+  const nextBtn = slider.querySelector(".testimonial-btn-next");
+  const dotsWrap = slider.querySelector(".testimonial-dots");
+  const intervalTime = Number(slider.dataset.interval) || 8000;
+
+  if (!track || !slides.length || !prevBtn || !nextBtn || !dotsWrap) return;
+
+  let currentIndex = 0;
+  let autoPlay = null;
+
+  const dots = slides.map((_, index) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "testimonial-dot";
+    dot.setAttribute("role", "tab");
+    dot.setAttribute("aria-label", `Go to testimonial ${index + 1}`);
+    dot.addEventListener("click", () => {
+      goToSlide(index);
+      restartAutoPlay();
+    });
+    dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    slides.forEach((slide, index) => {
+      slide.classList.toggle("is-active", index === currentIndex);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("is-active", index === currentIndex);
+      dot.setAttribute("aria-selected", index === currentIndex ? "true" : "false");
+    });
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    if (currentIndex < 0) currentIndex = slides.length - 1;
+    if (currentIndex >= slides.length) currentIndex = 0;
+    updateSlider();
+  }
+
+  function nextSlide() {
+    goToSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    goToSlide(currentIndex - 1);
+  }
+
+  function startAutoPlay() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    autoPlay = setInterval(nextSlide, intervalTime);
+  }
+
+  function stopAutoPlay() {
+    clearInterval(autoPlay);
+    autoPlay = null;
+  }
+
+  function restartAutoPlay() {
+    stopAutoPlay();
+    startAutoPlay();
+  }
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    restartAutoPlay();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    restartAutoPlay();
+  });
+
+  slider.addEventListener("mouseenter", stopAutoPlay);
+  slider.addEventListener("mouseleave", startAutoPlay);
+  slider.addEventListener("focusin", stopAutoPlay);
+  slider.addEventListener("focusout", startAutoPlay);
+
+  updateSlider();
+  startAutoPlay();
+});
