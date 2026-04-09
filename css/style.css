@@ -4248,3 +4248,8 @@ right: clamp(200px, 125vw, 500px);
   object-fit: cover; /* fills circle nicely */
   border-radius: 999px;
 }
+@media (max-width: 860px) {
+  .header-phone {
+    display: none;
+  }
+}
