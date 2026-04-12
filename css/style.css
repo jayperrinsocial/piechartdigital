@@ -4287,3 +4287,15 @@ right: clamp(200px, 125vw, 500px);
   display: flex;
   justify-content: center;
 }
+.nav-phone-item {
+  display: none;
+}
+@media (max-width: 860px) {
+  .header-phone {
+    display: none;
+  }
+
+  .nav-phone-item {
+    display: block;
+  }
+}
