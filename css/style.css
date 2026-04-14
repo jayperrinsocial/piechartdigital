@@ -4336,3 +4336,22 @@ right: clamp(200px, 125vw, 500px);
     display: none;
   }
 }
+/* Case study images - desktop refinement */
+@media (min-width: 900px) {
+  .case-study-media--hero-image img,
+  .case-study-media--full img {
+    width: 100%;
+    max-width: 1000px; /* key bit */
+    margin: 0 auto;
+    display: block;
+
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .case-study-media--hero-image,
+  .case-study-media--full {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
