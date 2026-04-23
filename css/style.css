@@ -4470,51 +4470,57 @@ right: clamp(200px, 125vw, 500px);
   }
 }
 /* ------------------------------
-   Brand scroll arrows (mobile hint)
+   Brand scroller buttons
 ------------------------------ */
 
 .brand-scroll-wrapper {
   position: relative;
 }
 
-.brand-scroll-wrapper::before,
-.brand-scroll-wrapper::after {
-  content: "";
+.brand-scroll-btn {
   position: absolute;
   top: 50%;
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  background: #ffffff;
-  border: 2px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.08);
   transform: translateY(-50%);
-  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  color: #0b0b0b;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.08);
   display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 4;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
 }
 
-/* Left arrow */
-.brand-scroll-wrapper::before {
-  left: -12px;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='15 18 9 12 15 6'/></svg>");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 18px;
+.brand-scroll-btn:hover {
+  transform: translateY(calc(-50% - 2px));
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.08);
 }
 
-/* Right arrow */
-.brand-scroll-wrapper::after {
-  right: -12px;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 18 15 12 9 6'/></svg>");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 18px;
+.brand-scroll-btn--prev {
+  left: -8px;
 }
 
-/* Show only on mobile */
+.brand-scroll-btn--next {
+  right: -8px;
+}
+
 @media (max-width: 768px) {
-  .brand-scroll-wrapper::before,
-  .brand-scroll-wrapper::after {
-    display: block;
+  .brand-scroll-btn {
+    display: flex;
   }
-} 
+}
+
+@media (min-width: 769px) {
+  .brand-scroll-btn {
+    display: none !important;
+  }
+}
