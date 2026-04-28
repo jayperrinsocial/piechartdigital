@@ -4708,3 +4708,14 @@ right: clamp(200px, 125vw, 500px);
     max-height: 420px;
   }
 }
+.hero-quote-cta__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffd400;
+  font-size: 20px;
+  font-weight: 700;
+}
