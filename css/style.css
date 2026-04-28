@@ -4549,10 +4549,6 @@ right: clamp(200px, 125vw, 500px);
 }
 
 /* main pill */
-.hero-quote-cta {
-  position: absolute;
-  top: -10px; /* controls "drop" from header */
-  right: 40px;
 
   display: inline-flex;
   align-items: center;
@@ -4718,4 +4714,28 @@ right: clamp(200px, 125vw, 500px);
   background: #ffd400;
   font-size: 20px;
   font-weight: 700;
+}
+.hero-quote-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  margin: 18px 0 10px; /* spacing under headline */
+
+  padding: 18px 28px;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #0b0b0b;
+  text-decoration: none;
+
+  font-weight: 700;
+  font-size: 18px;
+
+  box-shadow: 0 12px 0 rgba(0,0,0,0.08),
+              0 18px 36px rgba(0,0,0,0.12);
+
+  border: 2px solid rgba(0,0,0,0.06);
+
+  transition: all 0.2s ease;
 }
