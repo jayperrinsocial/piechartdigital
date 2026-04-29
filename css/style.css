@@ -4739,3 +4739,11 @@ right: clamp(200px, 125vw, 500px);
 
   transition: all 0.2s ease;
 }
+/* ------------------------------
+   Testimonials grey background
+------------------------------ */
+
+.section-testimonials {
+  background: #f4f4f4;
+  padding: 72px 0;
+}
