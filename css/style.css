@@ -4777,3 +4777,12 @@ right: clamp(200px, 125vw, 500px);
 .section-brands {
   padding-top: 40px; /* reduce this */
 }
+.case-study-quote .case-study-quote__card {
+  background: #ffd400;
+  color: #0b0b0b;
+}
+
+.case-study-quote .case-study-quote__text,
+.case-study-quote .case-study-quote__source {
+  color: #0b0b0b;
+}
